@@ -10,6 +10,15 @@
     }
 }
 
+@mixin transition($delay:200, $property:all , $function:linear) {
+    -webkit-transition: $property #{$delay}ms $function;
+}
+@mixin display-flex($justify: flex-left, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
 %clear:after {
     content: '';
     clear: both;

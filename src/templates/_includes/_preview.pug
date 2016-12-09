@@ -1,0 +1,18 @@
+.preview
+    ul.preview-slider
+        li
+            img(src='files/img/slide-1.jpg')
+    .preview-list.row
+        mixin preview-item(image, title, text)
+            .preview-item.medium-4.column.text-center
+                .preview-item-image
+                    img(src=image)
+                .preview-item-description
+                    h3= title
+                    p= text
+                    a.button
+                        | детальніше
+                        i.fa.fa-angle-right
+        +preview-item( 'files/img/preview-1.jpg','Експерт Хью Джекман','Такий мед дуже багатий за складом, так як містить всі вітамін.')
+        +preview-item( 'files/img/preview-2.jpg','Якості смаку','Зміцнює імунітет, однаково ефективний і для дорослих, і для дітей.')
+        +preview-item( 'files/img/preview-3.jpg','Про бджіл','Нарівні з іншими сортами меду, є природним антибіотиком.')

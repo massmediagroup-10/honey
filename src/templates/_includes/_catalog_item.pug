@@ -1,0 +1,20 @@
+mixin catalog-item(image,title,size,size2)
+    .column(class=size,class=size2)
+         .catalog-item.text-center
+            .catalog-item-image
+                img(src=image)
+            .catalog-item-description
+                .catalog-item-visible
+                    .row.column
+                        h5=title
+                        h5.catalog-item-price 112.00 ₴
+                .catalog-item-hidden
+                    a.button.large
+                        span
+                            i.fa.fa-search-plus
+                            em ДЕТАЛЬНІШЕ
+                    a.button.large
+                        span
+                            i.fa.fa-shopping-cart
+                            em ДОДАТИ В КОШИК
+

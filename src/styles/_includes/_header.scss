@@ -1,0 +1,95 @@
+.header {
+    padding: 13px 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    &.fixed {
+        padding-top: 5px;
+        .header-main {
+            margin-bottom: 5px;
+        }
+        .header-logo {
+            height: 53px;
+            img {
+            }
+        }
+    }
+    &-main {
+        background: $light-gray;
+        display: flex;
+        flex-wrap: wrap;
+        & > .column {
+            display: flex;
+        }
+    }
+    &-contacts {
+        @include display-flex(flex-start, center);
+        .item-contact {
+            font-size: 12px;
+            margin-right: 7px;
+            .fa {
+                font-size: 17px;
+                padding-right: 6px;
+            }
+            color: $medium-gray;
+            &.extreme-contact {
+                margin-left: 28px;
+            }
+        }
+    }
+    &-logo {
+        @include display-flex(center, center);
+        transition: 300ms all ease-out;
+        height: 120px;
+        img {
+            transition: 300ms all ease-out;
+            padding-left: 3px;
+            max-height: 100%;
+            margin: 0 auto;
+        }
+    }
+    &-menu {
+        @include display-flex(flex-end, center);
+        ul {
+            margin-bottom: 0;
+        }
+        li {
+            display: inline-block;
+            vertical-align: bottom;
+            margin-left: 25px;
+            .fa {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.navigation {
+    background: #fff;
+    .menu {
+        display: table;
+        width: 100%;
+        li {
+            text-align: center;
+
+            &.has-submenu {
+                &:after {
+                    content: '';
+                }
+            }
+            a {
+                font-weight: bold;
+                text-transform: uppercase;
+                position: relative;
+                &:hover {
+                    color: $success-color;
+                }
+            }
+            ul.submenu {
+                display: none;
+            }
+        }
+    }
+}

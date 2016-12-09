@@ -16,3 +16,25 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
 }
+
+h2 {
+    font-family: $roboto;
+    text-transform: uppercase;
+}
+
+.button {
+    text-transform: uppercase;
+    font-family: $roboto;
+    font-size: 12px;
+    min-width: 160px;
+    .fa {
+        font-size: 12px;
+        margin-left: 9px;
+    }
+    &.green {
+        background: #8ab816;
+        &:hover {
+            background: #779e13;
+        }
+    }
+}

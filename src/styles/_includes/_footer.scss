@@ -1,0 +1,61 @@
+.footer {
+    .navigation {
+        background-color: $dark-gray;
+        ul {
+            li {
+                a {
+                    color: #fff;
+                    text-transform: none;
+                }
+                &:first-child {
+                    text-align: left;
+                    a {
+                        padding-left: 0;
+                    }
+                }
+                &:last-child {
+                    text-align: right;
+                    a {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    &-bottom {
+        background: #666666;
+        padding: 9px 0;
+        p {
+            font-family: $roboto;
+            color: #fff;
+            margin-bottom: 10px;
+            @media #{large-up} {
+                margin-bottom: 0;
+            }
+        }
+        .item-contact {
+            color: $success-color;
+            margin-right: 25px;
+            margin-left: 0;
+
+            @media #{$large-up} {
+                margin-right: 0;
+                margin-left: 25px;
+            }
+            .fa {
+                font-size: 18px;
+            }
+        }
+        .extreme {
+            display: block;
+            margin-right: 60px;
+            margin-bottom: 10px;
+
+            @media #{$large-up} {
+                display: inline-block;
+                vertical-align: middle;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

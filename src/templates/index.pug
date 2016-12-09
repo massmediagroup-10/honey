@@ -3,5 +3,31 @@ html
     include _includes/_head.pug
     body.starterkit
         include _includes/_header.pug
-        include _includes/_content.pug
+        include _includes/_preview.pug
+        main.content
+            include _includes/_sale.pug
+            .catalog
+                h2.text-center магазин органічного меду
+                .catalog-navigation.text-center
+                    ul
+                        li.active
+                            a всі товари
+                        li
+                            a бочка
+                        li
+                            a саше
+                        li
+                            a стіки
+                        li
+                            a цукерки
+                        li
+                            a косметика
+                .row
+                    include _includes/_catalog_item.pug
+                    +catalog-item('files/img/product-1.jpg','«beeco» манука мед','large-4','medium-6')
+                    +catalog-item('files/img/product-2.jpg','«jola» яблучний мед','large-4','medium-6')
+                    +catalog-item('files/img/product-3.jpg','«beeco» бочка меду','large-4','medium-6')
+                    +catalog-item('files/img/product-1.jpg','«beeco» манука мед','large-4','medium-6')
+                    +catalog-item('files/img/product-2.jpg','«jola» яблучний мед','large-4','medium-6')
+                    +catalog-item('files/img/product-3.jpg','«beeco» бочка меду','large-4','medium-6')
         include _includes/_footer.pug

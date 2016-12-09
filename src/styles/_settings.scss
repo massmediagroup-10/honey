@@ -45,25 +45,25 @@
 
 // 1. Global
 // ---------
-
-$global-font-size: 12px;
+$roboto: "Roboto",sans-serif;
+$global-font-size: 14px;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-    primary: #4c4c4c,
-    secondary: #000000,
-    success: #a1ffcf,
+    primary: #000000,
+    secondary: #666666,
+    success: #f5a64a,
     warning: #ff5b5b,
     alert: #ec5840,
 );
-$light-gray: #999999;
-$medium-gray: #cccccc;
-$dark-gray: #8a8a8a;
+$light-gray: #f3f3f3;
+$medium-gray: #4d4d4d;
+$dark-gray: #333333;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Roboto', sans-serif;
+$body-font-family: 'Bitter', serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -118,10 +118,10 @@ $header-sizes: (
     ),
     medium: (
         'h1': 48,
-        'h2': 36,
+        'h2': 32,
         'h3': 28,
-        'h4': 26,
-        'h5': 14,
+        'h4': 22,
+        'h5': 16,
         'h6': 12,
     ),
 );
@@ -234,12 +234,12 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: 0.67rem 0.5rem;
+$button-padding: 0.9rem 0.5rem;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: #c9c9c9;
-$button-background-hover: #b0afaf;
-$button-color: #666666;
+$button-background: $success-color;
+$button-background-hover: #d99241;
+$button-color: #fff;
 $button-color-alt: $black;
 $button-radius: $global-radius;
 $button-sizes: (
@@ -382,7 +382,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.96rem 1rem;
+$menu-item-padding: 1.96rem 1rem;
 $menu-item-color-active: $white;
 $menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
