@@ -29,7 +29,9 @@
             font-family: $roboto;
             color: #fff;
             margin-bottom: 10px;
-            @media #{large-up} {
+            line-height: 22px;
+
+            @media #{$large-up} {
                 margin-bottom: 0;
             }
         }

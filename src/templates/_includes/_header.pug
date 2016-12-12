@@ -21,32 +21,43 @@
     .header-menu.medium-4.column.medium-text-right
         ul
             li
-                a
+                a(data-toggle="drop1")
                     span Укр
+                    i.fa.fa-chevron-down
+                ul#drop1.dropdown-pane(data-dropdown)
+                    li
+                        a(href='#') Укр
+                    li
+                        a(href='#') Eng
+
             li
                 a
                     i.fa.fa-user
                     span Особистий кабінет
             li
                 a
-                    i.fa.fa-shopping-basket
+                    i.fa.fa-shopping-basket.basket
+                        em.count 12
                     span Кошик
+
 nav.navigation
     .row.column
         ul.menu
             li
                 a
                     | Головна
-                    ul.submenu
-                        li
-                            a Детальна сторінка
-                            | про головне
-                        li
-                            a Детальна сторінка 2
             li
                 a Про компанію
             li
-                a про користь меду
+                a
+                    | про користь меду
+                ul.submenu
+                    li
+                        a
+                            span Детальна сторінка про головне
+                    li
+                        a
+                            span Детальна сторінка 2
             li
                 a мед та органічні продукти
             li

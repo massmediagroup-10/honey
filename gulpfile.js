@@ -136,7 +136,13 @@ gulp.task('fonts', function () {
 
 gulp.task('scripts', function() {
     return gulp.src([
-        routes.scripts.js
+        routes.scripts.js,
+        'node_modules/foundation-sites/js/foundation.core.js',
+        'node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
+        'node_modules/foundation-sites/js/foundation.util.keyboard.js',
+        'node_modules/foundation-sites/js/foundation.util.box.js',
+        'node_modules/foundation-sites/js/foundation.util.triggers.js',
+        'node_modules/foundation-sites/js/foundation.dropdown.js',
     ])
         .pipe(plumber({
             errorHandler: notify.onError({

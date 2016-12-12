@@ -86,6 +86,42 @@
             transition: 350ms all ease;
         }
     }
+    &-label {
+        position: absolute;
+        text-align: center;
+        width: 64px;
+        height: 65px;
+        color: #fff;
+        font-family: $roboto;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        display: table;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 98px 98px 0 0;
+            border-color: transparent;
+        }
+        &.new:before {
+            border-color: #bd8cbf transparent transparent transparent;
+        }
+        &.discount:before {
+            border-color: #e15548 transparent transparent transparent;
+        }
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            transform: rotate(-46deg);
+            letter-spacing: 0.4px;
+        }
+    }
     &-navigation {
         margin-bottom: 79px;
         ul {

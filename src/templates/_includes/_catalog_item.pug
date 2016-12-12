@@ -1,8 +1,11 @@
-mixin catalog-item(image,title,size,size2)
+mixin catalog-item(image,title,size,size2,labelid,labeltext)
     .column(class=size,class=size2)
          .catalog-item.text-center
+            .catalog-label(class=labelid)
+                span=labeltext
             .catalog-item-image
-                img(src=image)
+                a(href="#")
+                    img(src=image)
             .catalog-item-description
                 .catalog-item-visible
                     .row.column
