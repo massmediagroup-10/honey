@@ -1,4 +1,8 @@
 .catalog {
+    margin-bottom: 30px;
+    h2 {
+        margin-bottom: 25px;
+    }
     &-item {
         border: 1px solid rgb(245, 233, 220);
         transition: 350ms all ease;
@@ -123,7 +127,7 @@
         }
     }
     &-navigation {
-        margin-bottom: 79px;
+        margin-bottom: rem-calc(77);
         ul {
             display: inline-block;
             li {
@@ -133,13 +137,14 @@
                     text-transform: uppercase;
                     font-family: $roboto;
                     font-size: 12px;
+                    font-weight: bold;
                 }
                 &.active a,
-                & a:hover{
+                & a:hover {
                     color: $success-color;
                 }
 
-                &:not(:last-child){
+                &:not(:last-child) {
                     a:after {
                         content: '//';
                         color: #bfbfbf;
@@ -147,6 +152,31 @@
                     }
                 }
             }
+        }
+    }
+    &-header {
+        font-family: $roboto;
+        font-size: 12px;
+        margin-bottom: 20px;
+        h2 {
+            margin-bottom: 20px;
+            @media #{$large-up} {
+                margin-bottom: 0px;
+            }
+        }
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 13px;
+        }
+        select {
+            display: inline-block;
+            vertical-align: middle;
+            width: 130px;
+            margin-bottom: 0;
+        }
+        .form {
+            padding-top: 5px;
         }
     }
 }

@@ -1,0 +1,88 @@
+[type='checkbox'] + label, [type='radio'] + label {
+    margin: 0;
+}
+
+.radio-group input,
+.checkbox-group input {
+    display: none;
+}
+
+.checkbox-group input:checked + label,
+.checkbox-group input:checked + label:active,
+.radio-group input:checked + label,
+.radio-group input:checked + label:active {
+    .box {
+        .fa {
+            display: block;
+        }
+    }
+}
+
+.checkbox {
+    .box {
+        @extend %inline-middle;
+        font-size: 12px;
+        border-width: 1px;
+        border-color: #dddddd;
+        border-style: solid;
+        background-color: #fff;
+        width: 25px;
+        height: 25px;
+        margin-right: 13px;
+        text-align: center;
+        position: relative;
+        top: -1px;
+        .fa {
+            display: none;
+            color: #595959;
+            top: 5px;
+            position: relative;
+        }
+    }
+    a {
+        color: #bf9e8f;
+        text-decoration: underline !important;
+        padding: 0 4px;
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
+}
+
+.form {
+    [type='text'],
+    [type='password'],
+    [type='date'],
+    [type='datetime'],
+    [type='datetime-local'],
+    [type='email'],
+    [type='number'],
+    [type='search'],
+    [type='tel'],
+    select {
+        font-family: $roboto;
+        height: 35px;
+        padding-left: 13px;
+        &:not(:focus) {
+            box-shadow: none;
+        }
+        &:focus {
+            box-shadow: 0 0 0px 2px #a5c7fe;
+        }
+        &.error {
+            box-shadow: 0 0 0px 2px #ff6f74;
+        }
+    }
+    label {
+        &.error {
+            display: none !important;
+        }
+    }
+}
+
+select {
+    font-family: $roboto;
+    font-size: 12px;
+    background-image: url(../files/img/select.png);
+    padding-right: 19px;
+}

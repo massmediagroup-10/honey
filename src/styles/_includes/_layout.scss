@@ -1,0 +1,35 @@
+.innerpage {
+    border-top: 2px solid #f3f3f3;
+    padding-top: 15px;
+}
+
+.heading-additional {
+    text-align: center;
+    margin-bottom: 4px;
+    i {
+        margin-bottom: 11px;
+    }
+    em {
+        display: block;
+        color: $success-color;
+    }
+}
+
+.breadcrumbs {
+    margin-bottom: 22px;
+    li {
+        text-transform: none;
+        font-family: $roboto;
+        a {
+            color: $secondary-color;
+        }
+        span {
+            color: $primary-color;
+        }
+    }
+    li:not(:last-child):after {
+        content: "\f105";
+        font: normal normal normal 14px/1 FontAwesome;
+        margin: 0 1rem;
+    }
+}

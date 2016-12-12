@@ -1,0 +1,35 @@
+doctype html
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.innerpage
+            .catalog
+                .row.column
+                    .breadcrumbs
+                        ul
+                            li
+                                a(href='/') Головна
+                            li
+                                span Мед та органічні продукти
+                    .catalog-header.row
+                        .large-6.column
+                            h2 Каталог
+                        .large-6.column.large-text-right.form
+                            a.link-remove
+                                | Сортування
+                            select
+                                option Вибрати
+                                option 2
+                .row
+                    .large-4.column
+                        include _includes/_filter.pug
+                    .large-8.column
+                        include _includes/_catalog_item.pug
+                        +catalog-item('files/img/product-1.jpg','«beeco» манука мед','large-6','medium-6','new', 'Новинка')
+                        +catalog-item('files/img/product-2.jpg','«jola» яблучний мед','large-6','medium-6')
+                        +catalog-item('files/img/product-3.jpg','«beeco» бочка меду','large-6','medium-6')
+                        +catalog-item('files/img/product-1.jpg','«beeco» манука мед','large-6','medium-6','discount','sale -20%')
+                        +catalog-item('files/img/product-2.jpg','«jola» яблучний мед','large-6','medium-6')
+                        +catalog-item('files/img/product-3.jpg','«beeco» бочка меду','large-6','medium-6')
+        include _includes/_footer.pug
