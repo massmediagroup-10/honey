@@ -40,6 +40,9 @@
             color: $success-color;
             margin-right: 25px;
             margin-left: 0;
+            &:hover {
+                color: #e2b889;
+            }
 
             @media #{$large-up} {
                 margin-right: 0;

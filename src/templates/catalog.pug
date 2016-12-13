@@ -4,23 +4,23 @@ html
     body.starterkit
         include _includes/_header.pug
         main.innerpage
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a(href='/') Головна
+                        li
+                            span Мед та органічні продукти
             .catalog
-                .row.column
-                    .breadcrumbs
-                        ul
-                            li
-                                a(href='/') Головна
-                            li
-                                span Мед та органічні продукти
-                    .catalog-header.row
-                        .large-6.column
-                            h2 Каталог
-                        .large-6.column.large-text-right.form
-                            a.link-remove
-                                | Сортування
-                            select
-                                option Вибрати
-                                option 2
+                .catalog-header.row
+                    .large-6.column
+                        h2 Каталог
+                    .large-6.column.large-text-right.form
+                        a.link-remove
+                            | Сортування
+                        select
+                            option Вибрати
+                            option 2
                 .row
                     .large-4.column
                         include _includes/_filter.pug

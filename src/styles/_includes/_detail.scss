@@ -1,0 +1,170 @@
+.detail {
+    &-top {
+        margin-bottom: rem-calc(73);
+    }
+    &-recommend {
+        margin-bottom: 47px;
+    }
+    &-main {
+        font-family: $roboto;
+        h2 {
+            font-family: $roboto;
+            font-weight: normal;
+            margin-bottom: 3px;
+            letter-spacing: 0.6px;
+        }
+        & > p {
+            color: $lighter-gray;
+            margin-bottom: 18px;
+            letter-spacing: 0.3px;
+        }
+        h4 {
+            font-weight: normal;
+            color: $primary-color;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+        h6 {
+            font-family: $roboto;
+            font-weight: normal;
+            color: $primary-color;
+            margin-bottom: 13px;
+        }
+    }
+    &-price {
+        margin-bottom: 36px;
+        span {
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap;
+            color: $success-color;
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+            &.old {
+                color: #999999;
+                font-size: 18px;
+                font-weight: bold;
+                position: relative;
+                display: inline-block;
+                vertical-align: bottom;
+                line-height: 30px;
+                &:after {
+                    content: '';
+                    background: #999999;
+                    position: absolute;
+                    height: 1px;
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+                    top: calc(50% - 1px);
+                }
+            }
+        }
+        &.small {
+            span {
+                font-size: 14px;
+                &:after {
+                    top: calc(50% + 0px);
+                }
+            }
+        }
+    }
+
+    &-size {
+        margin-bottom: 1rem;
+        margin-top: -24px;
+        margin-right: 25px;
+        width: 98px;
+        display: inline-block;
+        vertical-align: middle;
+        input {
+            margin-bottom: 0;
+        }
+        label {
+            font-size: 12px;
+        }
+    }
+
+    &-actions {
+        margin-bottom: 20px;
+        .button {
+            min-width: 211px;
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+        }
+    }
+
+    &-buy {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &-share {
+        text-align: left;
+        color: $dark-gray;
+        font-size: 14px;
+        margin-bottom: 36px;
+        p {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            letter-spacing: 0.2px;
+            font-family: $roboto;
+        }
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 9px;
+            color: $lighter-gray;
+            &:hover {
+                color: $medium-gray;
+            }
+        }
+        .fa {
+            font-size: 18px;
+        }
+    }
+
+    &-slider {
+        margin-bottom: 32px;
+        @extend %clear;
+        &-main {
+            clear: both;
+            margin-bottom: 20px;
+            padding: 0 27px;
+            float: left;
+            width: 100%;
+            position: relative;
+
+            @media #{$large-up} {
+                width: calc(100% - 97px);
+                margin-bottom: 0px;
+            }
+            .slick-track {
+                @include display-flex(center, center);
+            }
+        }
+        &-nav {
+            width: 100%;
+            float: right;
+            .slider-img {
+                margin-bottom: 0px;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+            @media #{$large-up} {
+                width: 82px;
+                .slider-img {
+                    margin-bottom: 15px;
+                    margin-right: 0px;
+                    margin-left: 0px;
+                }
+            }
+        }
+
+    }
+}

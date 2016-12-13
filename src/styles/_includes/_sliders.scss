@@ -16,3 +16,45 @@
         }
     }
 }
+
+.detail-slider-main {
+    border: 2px solid #f3f3f3;
+    .slick-arrow {
+        position: absolute;
+        top: calc(50% - 12.5px);
+        z-index: 2;
+        i {
+            font-size: 28px;
+            color: #999999;
+        }
+        &.slick-prev {
+            left: 30px;
+        }
+        &.slick-next {
+            right: 30px;
+        }
+    }
+}
+.detail-slider-nav {
+    .slick-slide {
+        cursor: pointer;
+        .slider-img {
+            border: 2px solid #f3f3f3;
+            transition: 300ms all ease;
+        }
+        &.slick-current {
+            .slider-img {
+                border: 2px solid $success-color;
+            }
+        }
+    }
+}
+
+.slick-slider {
+    * {
+        outline: none;
+    }
+    img {
+        margin: 0 auto;
+    }
+}
