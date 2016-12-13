@@ -15,6 +15,23 @@
             right: 30px;
         }
     }
+    &.slick-initialized {
+        .slick-current.slick-active {
+            img {
+                animation-name: scaleimage;
+                animation-duration: 12s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+    @keyframes scaleimage {
+        from {
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+        to {
+            transform: matrix(1.08, 0, 0, 1.08, 0, 0);
+        }
+    }
 }
 
 .detail-slider-main {
@@ -35,6 +52,7 @@
         }
     }
 }
+
 .detail-slider-nav {
     .slick-slide {
         cursor: pointer;

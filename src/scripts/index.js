@@ -5,9 +5,12 @@ function initSlider() {
         dots: false,
         infinite: true,
         speed: 1000,
-        fade: true,
+        fade: false,
         prevArrow: '<a href="#" class="slick-prev"><i class="fa fa-chevron-left"></i></a>',
-        nextArrow: '<a href="#" class="slick-next"><i class="fa fa-chevron-right"></i></a>'
+        nextArrow: '<a href="#" class="slick-next"><i class="fa fa-chevron-right"></i></a>',
+        autoplay: true,
+        autoplaySpeed: 8000,
+        pauseOnFocus: false
     });
 
     $('.detail-slider-for').slick({
