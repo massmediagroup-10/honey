@@ -1,4 +1,7 @@
 .preview-slider {
+    .slick-slide {
+        position: relative;
+    }
     .slick-arrow {
         position: absolute;
         top: calc(50% - 12.5px);
@@ -29,7 +32,7 @@
             transform: matrix(1, 0, 0, 1, 0, 0);
         }
         to {
-            transform: matrix(1.08, 0, 0, 1.08, 0, 0);
+            transform: matrix(1.1, 0, 0, 1.1, 0, 0);
         }
     }
 }

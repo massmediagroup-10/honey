@@ -5,7 +5,17 @@
         width: 100%;
     }
     &-slider {
-
+        &-text {
+            font-size: 53px;
+            line-height: 62px;
+            position: absolute;
+            width: 420px;
+            height: 290px;
+            z-index: 100;
+            text-align: center;
+            color: #fff;
+            @extend %full;
+        }
     }
     &-list {
         @media #{$medium-up} {
