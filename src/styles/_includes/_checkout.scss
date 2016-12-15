@@ -1,0 +1,134 @@
+.checkout {
+    color: $primary-color;
+    font-family: $roboto;
+    h6 {
+        font-family: $roboto;
+        margin-top: 9px;
+    }
+    h2 {
+        margin-bottom: 16px;
+    }
+    &-title {
+        padding-bottom: 2px;
+        margin-bottom: 13px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 23px;
+
+        .fa {
+            margin-right: 18px;
+            font-size: 16px;
+            width: 10px;
+            position: relative;
+            //transition: 300ms all ease;
+            left: 0;
+        }
+        span {
+            font-size: 16px;
+        }
+        a {
+            &:hover {
+                text-decoration: none;
+                .fa {
+                    // left: 3px;
+                }
+            }
+        }
+
+    }
+    &-item {
+        border-bottom: 1px solid #e3e3e3;
+        padding-bottom: 11px;
+        margin-bottom: 30px;
+        &.active {
+            .checkout-title {
+                .fa {
+                    transform: rotate(90deg);
+                    top: 3px;
+                }
+            }
+        }
+    }
+    &-body {
+        padding-left: 28px;
+        a {
+            text-decoration: underline;
+            font-size: 12px;
+            margin-top: -8px;
+            color: $lighter-gray;
+            &:hover {
+                text-decoration: none;
+                color: $medium-gray;
+            }
+        }
+        label {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 12px;
+            color: $lighter-gray;
+            &.important {
+                span {
+                    padding-left: 9px;
+                    display: block;
+                }
+                &:before {
+                    content: '*';
+                    float: left;
+                }
+            }
+        }
+        .filter-item {
+            margin-bottom: 0px;
+            padding: 0;
+        }
+    }
+}
+
+.shopping-card {
+    &-header {
+        color: #333333;
+        font-size: 20px;
+        font-family: $bitter;
+        font-weight: bold;
+        background: $success-color;
+        padding: 0 20px;
+        line-height: 55px;
+    }
+    &-body {
+        background: $light-gray;
+        font-size: 16px;
+        padding: 25px 20px 36px 20px;
+        b {
+            font-size: 18px;
+            span {
+                padding-right: 6px;
+            }
+        }
+    }
+    &-footer {
+        padding: 26px 20px 23px 20px;
+        background: $light-gray;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            border-top: 1px solid #cccccc;
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            top: 0;
+        }
+        a {
+            font-size: 12px;
+            text-decoration: underline;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $secondary-color;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -26,6 +26,11 @@ iframe {
     max-width: 100%;
 }
 
+.block {
+    display: block;
+    width: 100%;
+}
+
 .button {
     text-transform: uppercase;
     font-family: $roboto;
@@ -61,6 +66,10 @@ iframe {
         font-size: 12px;
         font-weight: bold;
         padding: 0.822rem 0.5rem;
+    }
+    &.block {
+        display: block;
+        width: 100%;
     }
 }
 

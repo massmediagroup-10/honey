@@ -1,0 +1,152 @@
+doctype html
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.innerpage
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a(href='/') Головна
+                        li
+                            span Оформлення замовлення
+            .checkout.row
+                .small-12.large-4.column.float-right
+                    .shopping-card
+                        .shopping-card-header
+                            .row
+                                .small-6.column.text-left Замовлення
+                                .small-6.column.text-right До оплати
+                        .shopping-card-body
+                            .row
+                                .small-6.column.text-left 2 товар(и)
+                                .small-6.column.text-right
+                                    b
+                                        span 198.00
+                                        | ₴
+                        .shopping-card-footer.text-center
+                            a(href="#") редагувати замовлення
+
+                .small-12.large-8.column.float-right
+                    h2 Оформлення замовлення
+                    .checkout-item.form.active
+                        form(name="quick_order")
+                            .checkout-title
+                                a
+                                    i.fa.fa-angle-right
+                                    span Швидке замовлення
+                            .checkout-body
+                                .row
+                                    .large-4.column
+                                        label
+                                            | Номер мобільного *
+                                            input(type="tel", placeholder="Введіть Ваш номер", required="required")
+                                    .large-4.column
+                                        label &nbsp;
+                                        input.button.block(type="submit",value="замовити")
+                                    .large-4.column
+                                        label &nbsp;
+                                        p.important
+                                            span Менеджер Вам зателефонує та уточнить деталі
+                    .checkout-item.form
+                        form(name="existing_customer")
+                            .checkout-title
+                                a
+                                    i.fa.fa-angle-right
+                                    span Постійний клієнт
+                            .checkout-body
+                                .row
+                                    .large-4.column
+                                        label
+                                            | E-mail
+                                            input(type="email",placeholder="E-mail Adress", required="required")
+                                    .large-4.column
+                                        label
+                                            | Пароль
+                                            input(type="password",placeholder="Your password", required="required")
+                                    .large-4.column
+                                        label &nbsp;
+                                        input.button.block(type="submit",value="увійти")
+                                        a.float-right Забули пароль?
+                    .checkout-item.form
+                        form(name="new_customer")
+                            .checkout-title
+                                a
+                                    i.fa.fa-angle-right
+                                    span Новий клієнт
+                            .checkout-body
+                                .row
+                                    .large-4.column.end
+                                        label
+                                            | Номер мобільного *
+                                            input(type="tel", placeholder="Введіть Ваш номер", required="required")
+                                    .large-4.column.end
+                                        label
+                                            | E-mail
+                                            input(type="email",placeholder="E-mail Adress")
+                                .row
+                                    .large-4.column.end
+                                        label
+                                            | Ім’я *
+                                            input(type="text", placeholder="Введіть Ваше ім’я", required="required")
+                                    .large-4.column.end
+                                        label
+                                            | Прізвище *
+                                            input(type="text",placeholder="Введіть Ваше прізвище", required="required")
+                                .row.column
+                                    h6 Доставка *
+                                .row.filter-item
+                                    .large-4.column
+                                        .filter-field.radio-group
+                                            input#radio1(type='radio',name="delivery")
+                                            label.radio(for='radio1')
+                                                span.box
+                                                    i.fa
+                                                | Нова пошта, 1-3 дні, від 35 грн
+                                    .large-4.column
+                                        select.block
+                                            option(value="") Оберіть місто
+                                    .large-4.column
+                                        select.block
+                                            option(value="") Оберіть склад
+                                .row.filter-item
+                                    .large-4.column
+                                        .filter-field.radio-group
+                                            input#radio2(type='radio',name="delivery")
+                                            label.radio(for='radio2')
+                                                span.box
+                                                    i.fa
+                                                | Delivery, 3-7 днів, від 20 грн
+                                    .large-4.column
+                                        select.block
+                                            option(value="") Оберіть місто
+                                    .large-4.column
+                                        select.block
+                                            option(value="") Оберіть склад
+                                .row.column
+                                    h6 Оплата *
+                                .row.filter-item
+                                    .large-4.column.end
+                                        .filter-field.radio-group
+                                            input#radio3(type='radio',name="paymant")
+                                            label.radio(for='radio3')
+                                                span.box
+                                                    i.fa
+                                                | Приват24
+                                .row.filter-item
+                                    .large-4.column.end
+                                        .filter-field.radio-group
+                                            input#radio4(type='radio',name="paymant")
+                                            label.radio(for='radio4')
+                                                span.box
+                                                    i.fa
+                                                | LiqPay
+                                .row
+                                    .large-8.column.end
+                                        label
+                                            | Додати коментарі
+                                            textarea(placeholder="Введіть Ваш коментар")
+                                input.button(type="submit",value="замовити")
+
+        include _includes/_footer.pug
