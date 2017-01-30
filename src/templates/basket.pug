@@ -1,0 +1,47 @@
+doctype html
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.innerpage
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a(href='/') Головна
+                        li
+                            span Кошик
+            .basket
+                .page-header.row
+                    .large-6.column
+                        h2 Кошик
+                .row
+                    .small-12.large-4.column.float-right
+                        .shopping-card
+                            .shopping-card-header
+                                .row
+                                    .small-6.column.text-left Замовлення
+                                    .small-6.column.text-right До оплати
+                            .shopping-card-body
+                                .row
+                                    .small-6.column.text-left 2 товар(и)
+                                    .small-6.column.text-right
+                                        b
+                                            span 198.00
+                                            | ₴
+                            .shopping-card-footer.text-center
+                                a.button.outline.small оформити замовлення
+                                .clearfix
+                                a(href="#") продовжити покупки
+                    .small-12.large-8.column.float-right
+                        include _includes/_basket_item.pug
+                        include _includes/_basket_item.pug
+            .catalog
+                h2.text-center Вам може сподобатися
+                .row
+                    include _includes/_catalog_item.pug
+                    +catalog-item('files/img/product-1.jpg','«jola» яблучний мед','large-4','medium-6')
+                    +catalog-item('files/img/product-2.jpg','«jola» яблучний мед','large-4','medium-6','new', 'Новинка')
+                    +catalog-item('files/img/product-3.jpg','«jola» яблучний мед','large-4','medium-6')
+
+        include _includes/_footer.pug

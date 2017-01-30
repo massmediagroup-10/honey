@@ -1,0 +1,101 @@
+.basket {
+    font-family: $roboto;
+    margin-bottom: rem-calc(67px);
+    .catalog-item{
+        margin-bottom: 15px;
+        display: inline-block;
+        @media #{$large-up} {
+            margin-bottom: 0px;
+        }
+        @media #{$medium-up} {
+            display: block;
+            float: left;
+        }
+        &-image {
+            width: 175px;
+            height: 175px;
+        }
+    }
+    &-thumbnail {
+        float: left;
+        margin-bottom: 1rem;
+    }
+    &-item {
+        border-bottom: 1px solid #e3e3e3;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        .detail-price {
+            margin-bottom: 0;
+            @media #{$large-up} {
+                margin-bottom: 15px;
+            }
+        }
+        &-description {
+            margin-bottom: 1rem;
+            @media #{$medium-up} {
+                margin-left: 205px;
+            }
+            h5 {
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+            p {
+                font-weight: normal;
+                color: $lighter-gray;
+            }
+        }
+    }
+    &-remove {
+        float: right;
+        color: #e36054;
+        font-size: 12px;
+        position: relative;
+        &.remove-large {
+            display: none;
+            @media #{$large-up} {
+                display: block;
+            }
+        }
+        &.remove-small {
+            @media #{$large-up} {
+                display: none;
+            }
+        }
+        &:hover {
+            span {
+                transform: translateY(0px);
+                opacity: 1;
+                z-index: 1;
+            }
+        }
+        span {
+            opacity: 0;
+            transition: 300ms all ease;
+            transform: translateY(5px);
+            z-index: -1;
+            display: block;
+            position: absolute;
+            bottom: 100%;
+            right: 100%;
+            margin-bottom: 7px;
+            margin-right: -10px;
+            background: $success-color;
+            color: $dark-gray;
+            white-space: nowrap;
+            padding: 0 15px;
+            height: 20px;
+            line-height: 20px;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                right: 5px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 8px 8px 0;
+                border-color: transparent $success-color transparent transparent;
+            }
+        }
+    }
+}

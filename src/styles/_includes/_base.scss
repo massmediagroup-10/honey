@@ -36,6 +36,7 @@ iframe {
     font-family: $roboto;
     font-size: 12px;
     min-width: 160px;
+    text-decoration: none;
     .fa {
         font-size: 12px;
         line-height: 9px;
@@ -54,7 +55,7 @@ iframe {
         }
     }
     &.outline {
-        background: #fff;
+        background:transparent;
         border: 1px solid $primary-color;
         color: $primary-color;
         &:hover {
@@ -78,4 +79,13 @@ iframe {
     height: 33px;
     display: inline-block;
     background: url(../files/img/icon-honey.png);
+}
+
+.page{
+    &-header {
+        margin-bottom: 20px;
+        h2 {
+            margin-bottom: 0;
+        }
+    }
 }

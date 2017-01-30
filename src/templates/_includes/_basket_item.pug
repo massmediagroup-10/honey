@@ -1,0 +1,30 @@
+.basket-item
+    .row
+        .large-7.column
+            a.basket-remove.remove-small(data-open="removeModal")
+                i.fa.fa-remove.warning
+                span Видалити з кошика
+            .catalog-item
+                .catalog-label.new
+                    span новинка
+                .catalog-item-image
+                    a(href="#")
+                        img(src='http://placehold.it/175x175')
+            .basket-item-description
+                h5
+                    a «beeco» манука мед манука
+                p Артикул 012543
+                .detail-price.small
+                    span 112.00 ₴
+        .large-2.small-3.column
+            p
+                b Кількість
+            input(type="number",min="1")
+        .large-3.column.end
+            a.basket-remove.remove-large(data-open="removeModal")
+                i.fa.fa-remove.warning
+                span Видалити з кошика
+            p
+                b Сума
+            .detail-price.small
+                span 112.00 ₴
