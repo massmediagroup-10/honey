@@ -1,0 +1,31 @@
+doctype html
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.blog
+            .full
+                include _includes/_blog_preview.pug
+                +blog-preview('files/img/preview-4.jpg','ПОРАДИ ЕКСПЕРТА', 'files/img/icon-man.png')
+                +blog-preview('files/img/preview-5.jpg','ПРО МЕД', 'files/img/icon-spoon.png')
+            include _includes/_blog_video.pug
+            include _includes/_blog_cell.pug
+            .blog-list.full
+                .blog-cells
+                    +blog-cell(true, '','', 'files/img/preview-6.jpg')
+                    +blog-cell(false, 'свіжий мед - завжди на користь','files/img/icon-man.png')
+                .blog-cells
+                    +blog-cell(true, '','', 'files/img/preview-7.jpg', 'float-right')
+                    +blog-cell(false, 'як обкурювати бджіл?','files/img/icon-spoon.png')
+                .blog-cells
+                    +blog-cell(true, '','', 'files/img/preview-8.jpg')
+                    +blog-cell(false, 'свіжий мед - завжди на користь','files/img/icon-man.png')
+                .blog-cells
+                    +blog-cell(true, '','', 'files/img/preview-9.jpg', 'float-right')
+                    +blog-cell(false, 'яку користь дає мед','files/img/icon-spoon.png')
+                .blog-footer
+                    a.button.loadMore
+                        | завантажити ще публікації
+                        i.fa.fa-rotate-left
+
+        include _includes/_footer.pug

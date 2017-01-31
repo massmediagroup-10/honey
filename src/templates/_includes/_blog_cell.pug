@@ -1,0 +1,14 @@
+mixin blog-cell(isPreview, title, icon, image, float)
+    .blog-cell.large-6.column(class=typeof float === "undefined" ? "" : float)
+        if isPreview
+            img(src=image)
+        else
+            .blog-cell-inner
+                h2
+                    span=title
+                    i.icon
+                        img(src=icon)
+                p
+                    | Травневий мед або Разнотравье (Поліфлора)
+                    | Назва меду говорить за себе - цей мед бджоли добувають з нектару польових і лісових квітів, які розцвітають теплою весною. Такий мед дуже багатий за складом, так як містить всі...
+                a.button детальніше
