@@ -1,6 +1,5 @@
 .checkout {
     color: $primary-color;
-    font-family: $roboto;
     h6 {
         font-family: $roboto;
         margin-top: 9px;
@@ -87,6 +86,7 @@
 }
 
 .shopping-card {
+    margin-bottom: 30px;
     &-header {
         color: #333333;
         font-size: 20px;
@@ -135,6 +135,9 @@
             &:hover {
                 text-decoration: none;
             }
+        }
+        .button {
+            margin-bottom: 19px;
         }
     }
 }

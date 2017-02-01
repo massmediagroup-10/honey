@@ -6,6 +6,7 @@
     }
     &-slider {
         &-text {
+            font-family: $bitter;
             font-size: 53px;
             line-height: 62px;
             position: absolute;
@@ -33,7 +34,6 @@
         }
         p {
             color: $secondary-color;
-            font-family: $roboto;
             letter-spacing: 0.2px;
             margin-bottom: 31px;
             line-height: 24px;

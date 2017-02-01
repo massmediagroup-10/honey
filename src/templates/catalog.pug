@@ -1,4 +1,3 @@
-doctype html
 html
     include _includes/_head.pug
     body.starterkit
@@ -25,11 +24,12 @@ html
                     .large-4.column
                         include _includes/_filter.pug
                     .large-8.column
-                        include _includes/_catalog_item.pug
-                        +catalog-item('files/img/product-1.jpg','«beeco» манука мед','large-6','medium-6','new', 'Новинка')
-                        +catalog-item('files/img/product-2.jpg','«jola» яблучний мед','large-6','medium-6')
-                        +catalog-item('files/img/product-3.jpg','«beeco» бочка меду','large-6','medium-6')
-                        +catalog-item('files/img/product-1.jpg','«beeco» манука мед','large-6','medium-6','discount','sale -20%')
-                        +catalog-item('files/img/product-2.jpg','«jola» яблучний мед','large-6','medium-6')
-                        +catalog-item('files/img/product-3.jpg','«beeco» бочка меду','large-6','medium-6')
+                        .row
+                            include _includes/_catalog_item.pug
+                            +catalog-item('files/img/product-1.jpg','«beeco» манука мед','large-6','medium-6','new', 'Новинка')
+                            +catalog-item('files/img/product-2.jpg','«jola» яблучний мед','large-6','medium-6')
+                            +catalog-item('files/img/product-3.jpg','«beeco» бочка меду','large-6','medium-6')
+                            +catalog-item('files/img/product-1.jpg','«beeco» манука мед','large-6','medium-6','discount','sale -20%')
+                            +catalog-item('files/img/product-2.jpg','«jola» яблучний мед','large-6','medium-6')
+                            +catalog-item('files/img/product-3.jpg','«beeco» бочка меду','large-6','medium-6')
         include _includes/_footer.pug

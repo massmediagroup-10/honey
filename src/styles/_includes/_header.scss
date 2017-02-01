@@ -131,7 +131,7 @@
 .navigation {
     background: #fff;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     .menu {
         display: table;
         width: 100%;
@@ -146,6 +146,7 @@
             }
             a {
                 font-weight: bold;
+                font-family: $bitter;
                 text-transform: uppercase;
                 position: relative;
                 &:hover {

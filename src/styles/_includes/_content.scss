@@ -1,0 +1,89 @@
+.content {
+    font-family: $roboto;
+    margin-bottom: 50px;
+    .article {
+        padding-right: 22px;
+        padding-bottom: 35px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e3e3e3;
+        p {
+            line-height: 1.8em;
+            margin: 1em 0 1.5em 0;
+        }
+        ul {
+            margin-bottom: 21px;
+            padding-left: 16px;
+            li {
+                line-height: 24px;
+                list-style: disc;
+            }
+        }
+        img {
+            margin-bottom: 18px;
+        }
+    }
+    .sidebar {
+        h5 {
+            font-family: $roboto;
+            border-bottom: 1px solid #e3e3e3;
+            line-height: 26px;
+            padding-bottom: 12px;
+            margin-bottom: 1em;
+        }
+        &-nav {
+            margin-bottom: 30px;
+            ul {
+                li {
+                    line-height: 23px;
+                    margin-bottom: 12px;
+                    a {
+                        @extend  .fa-angle-right;
+                        padding-left: 24px;
+                        position: relative;
+                        &:before {
+                            @extend .fa;
+                            color: $success-color;
+                            position: absolute;
+                            left: 1px;
+                            top: -2px;
+                            font-size: 18px;
+                            transition: 300ms all ease;
+                        }
+                        &:hover {
+                            &:before {
+                                left: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-articles {
+            ul {
+                li {
+                    @extend %clear;
+                    margin-bottom: 20px;
+                    img {
+                        float: left;
+                    }
+                    h6 {
+                        font-family: $roboto;
+                        font-size: 14px;
+                        font-weight: bold;
+                        padding-left: 131px;
+                        line-height: 19px;
+                        margin-bottom: 9px;
+                        color: $dark-gray;
+                        & > a {
+                            margin-bottom: 3px;
+                            display: block;
+                        }
+                        .tags {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -21,7 +21,6 @@
         left: 5%;
         @include display-flex(flex-start, center);
         p {
-            font-family: $roboto;
             font-weight: bold;
             font-size: 22px;
             margin-bottom: 8px;

@@ -1,7 +1,7 @@
 .basket {
-    font-family: $roboto;
     margin-bottom: rem-calc(67px);
     .catalog-item{
+        margin-top: -15px;
         margin-bottom: 15px;
         display: inline-block;
         @media #{$large-up} {
@@ -24,8 +24,15 @@
         border-bottom: 1px solid #e3e3e3;
         margin-top: 20px;
         padding-bottom: 20px;
+        padding-top: 14px;
+        &:first-child {
+            margin-top: 0;
+        }
         .detail-price {
             margin-bottom: 0;
+            &.small span{
+                font-size: 16px;
+            }
             @media #{$large-up} {
                 margin-bottom: 15px;
             }
@@ -37,18 +44,27 @@
             }
             h5 {
                 text-transform: uppercase;
-                margin-bottom: 0;
+                margin-bottom: 4px;
+                font-family: $roboto;
+                line-height: 24px;
             }
             p {
                 font-weight: normal;
                 color: $lighter-gray;
+                margin-bottom: 12px;
+            }
+        }
+        &-info {
+            p {
+                font-size: 12px;
+                line-height: 21px;
             }
         }
     }
     &-remove {
         float: right;
         color: #e36054;
-        font-size: 12px;
+        font-size: 18px;
         position: relative;
         &.remove-large {
             display: none;
@@ -69,6 +85,7 @@
             }
         }
         span {
+            font-size: 12px;
             opacity: 0;
             transition: 300ms all ease;
             transform: translateY(5px);

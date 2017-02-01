@@ -2,6 +2,11 @@ html, body {
     height: auto;
 }
 
+main{
+    position: relative;
+    z-index: 1;
+}
+
 main.content {
 }
 
@@ -15,6 +20,7 @@ ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: $bitter;
 }
 
 h2 {
@@ -29,16 +35,6 @@ iframe {
 .block {
     display: block;
     width: 100%;
-}
-
-
-.full {
-    @extend .row;
-    max-width: none;
-    padding: 0;
-    .column {
-        padding: 0;
-    }
 }
 
 .button {
@@ -79,11 +75,16 @@ iframe {
     &.small {
         font-size: 12px;
         font-weight: bold;
-        padding: 0.822rem 0.5rem;
+        padding: 0.822rem 0.9rem;
     }
     &.block {
         display: block;
         width: 100%;
+    }
+    &.loading {
+        .fa {
+            animation: loading 2s infinite;
+        }
     }
 }
 
@@ -94,11 +95,23 @@ iframe {
     background: url(../files/img/icon-honey.png);
 }
 
-.page{
-    &-header {
-        margin-bottom: 20px;
-        h2 {
-            margin-bottom: 0;
+
+.tags {
+    font-size: 12px;
+    margin-bottom: 19px;
+    a {
+        color: $lighter-gray;
+        font-weight: normal;
+        &:hover {
+            span {
+                text-decoration: underline;
+            }
+        }
+        .fa {
+            margin-right: 6px;
+        }
+        span {
+            color: $success-color;
         }
     }
 }
