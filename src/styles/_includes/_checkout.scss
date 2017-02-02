@@ -47,6 +47,16 @@
                 }
             }
         }
+        &.expanded {
+            border-bottom: 0;
+            .checkout-title {
+                border-bottom: 1px solid #e3e3e3;
+                padding-bottom: 12px;
+            }
+            .checkout-body {
+                padding: 0;
+            }
+        }
     }
     &-body {
         padding-left: 28px;
@@ -82,6 +92,9 @@
             margin-bottom: 0px;
             padding: 0;
         }
+    }
+    &-footer {
+        margin-top: rem-calc(15px);
     }
 }
 

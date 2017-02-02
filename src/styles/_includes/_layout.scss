@@ -133,3 +133,55 @@ body {
         margin-bottom: 2.5em;
     }
 }
+
+.reveal {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-family: $roboto;
+    border-color: transparent;
+    outline-color: #f5a64a;
+    h2, p {
+        color: #4c4c4c;
+        font-family: $roboto;
+    }
+    h2 {
+        font-size: 26px;
+        font-weight: normal;
+        margin-bottom: 1.35em;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    table {
+        td {
+            text-align: center;
+        }
+    }
+    .button {
+        margin-bottom: 15px;
+        min-width: auto;
+        @media #{$medium-up} {
+            margin-bottom: 0;
+        }
+    }
+    .reveal-actions {
+        margin-top: 47px;
+    }
+    &.xsmall {
+        @media #{$medium-up} {
+            width: 360px;
+        }
+    }
+    &-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color: $success-color;
+        .fa {
+            font-size: 16px;
+        }
+    }
+}

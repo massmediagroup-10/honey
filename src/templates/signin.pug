@@ -1,0 +1,100 @@
+doctype html
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.innerpage
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a(href='/') Головна
+                        li
+                            span Вхід
+            .checkout.row.column
+                .small-12
+                    h2 Вхід
+                    .checkout-item.form.expanded.active
+                        .row
+                            .large-9.column
+                                form(name="existing_customer")
+                                    .checkout-title
+                                        span Постійний клієнт
+                                    .checkout-body
+                                        .row
+                                            .large-4.column
+                                                label
+                                                    | E-mail
+                                                    input(type="email",placeholder="E-mail Adress", required="required")
+                                            .large-4.column
+                                                label
+                                                    | Пароль
+                                                    input(type="password",placeholder="Your password", required="required")
+                                            .large-4.column
+                                                label &nbsp;
+                                                input.button.block(type="submit",value="увійти")
+                                                a.float-right(data-open="forgotpass") Забули пароль?
+                            .large-3.column
+                                .checkout-title
+                                    span Увійти через
+                                a.button.block.facebook
+                                    i.fa.fa-facebook
+                                    span Facebook
+                                a.button.block.vk
+                                    i.fa.fa-vk
+                                    span вконтакте
+
+                    .checkout-item.form.expanded.active
+                        form(name="new_customer")
+                            .checkout-title
+                                span Реєстрація
+                            .checkout-body
+                                .row
+                                    .large-3.column
+                                        label
+                                            | Ім’я *
+                                            input(type="text",placeholder="Введіть Ваше ім’я", required="required")
+                                    .large-3.column.end
+                                        label
+                                            | Прізвище *
+                                            input(type="text",placeholder="Введіть Ваше прізвище", required="required")
+                                .row
+                                    .large-3.column
+                                        label
+                                            | Номер мобільного *
+                                            input(type="tel",placeholder="Введіть Ваш номер")
+                                    .large-3.column
+                                        label
+                                            | E-mail *
+                                            input(type="email",placeholder="Введіть Ваш email", required="required")
+                                    .large-3.column.end
+                                        label
+                                            | Місто *
+                                            select
+                                                option Оберіть місто
+                                .row
+                                    .large-3.column
+                                        label
+                                            | Пароль *
+                                            input(type="password",placeholder="Введіть Ваш пароль", required="required")
+                                    .large-3.column.end
+                                        label
+                                            | Підтвердіть пароль *
+                                            input(type="password",placeholder="Повторіть Ваш пароль", required="required")
+
+                            .checkout-footer
+                                input.button.accented.wide(type="submit",value="зареєструватись")
+
+
+        #forgotpass.reveal.xsmall(data-reveal='',data-options="showDelay:300; hideDelay:300")
+            a.reveal-close(aria-label='Close', data-close)
+                i.fa.fa-close
+            h2.text-center Забули пароль?
+            .form
+                input(type="email",placeholder="Введіть Ваш email", required="required")
+                p.form-hint
+                    | Введіть Ваш email, щоб ми відновили Ваш
+                    | пароль.
+                input.button.block.accented(type="submit",value="відновити пароль")
+
+        include _includes/_footer.pug

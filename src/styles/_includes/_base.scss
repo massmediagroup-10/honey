@@ -60,6 +60,29 @@ iframe {
             margin-left: 7px;
         }
     }
+    &.vk {
+        background: #507299;
+        &:hover {
+            background: #415c7a;
+        }
+    }
+    &.facebook {
+        background: #3b5998;
+        &:hover {
+            background: #2f477a;
+        }
+    }
+    &.vk,
+    &.facebook {
+        .fa {
+            font-size: 20px;
+            margin-right: 8px;
+            @extend %inline-middle;
+        }
+        span {
+            @extend %inline-middle;
+        }
+    }
     &.green {
         background: #8ab816;
         &:hover {
