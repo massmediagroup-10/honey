@@ -106,25 +106,6 @@
                 }
             }
         }
-        .basket {
-            position: relative;
-            .count {
-                border-radius: 50%;
-                background-color: rgb(245, 166, 74);
-                width: 16px;
-                height: 16px;
-                line-height: 16px;
-                font-size: 10px;
-                font-style: normal;
-                text-align: center;
-                position: absolute;
-                font-family: $roboto;
-                right: 100%;
-                bottom: 100%;
-                margin-bottom: -8px;
-                margin-right: -9px;
-            }
-        }
     }
 }
 

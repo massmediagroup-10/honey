@@ -43,6 +43,9 @@ iframe {
     font-size: 12px;
     min-width: 160px;
     text-decoration: none;
+    &.wide {
+        width: 230px;
+    }
     .fa {
         font-size: 12px;
         line-height: 9px;

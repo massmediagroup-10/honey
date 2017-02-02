@@ -1,0 +1,25 @@
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.innerpage
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a(href='/') Головна
+                        li
+                            span Мед та органічні продукти
+            .catalog
+                .page-header.catalog-header.row
+                    .large-6.column
+                        h2 Каталог
+                .row
+                    .large-4.column
+                        include _includes/_filter.pug
+                    .large-8.column
+                        .catalog-empty
+                            | На жаль, за вашим вибором <br>
+                            | немає продуктів
+                        include _includes/_sale.pug
+        include _includes/_footer.pug

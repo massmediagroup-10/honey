@@ -183,4 +183,12 @@
             padding-top: 5px;
         }
     }
+    &-empty {
+        font-size: 26px;
+        color: rgb(153, 153, 153);
+        line-height: 1.731;
+        text-align: center;
+        padding-top: rem-calc(30);
+        margin-bottom: rem-calc(50);
+    }
 }

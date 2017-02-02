@@ -1,0 +1,18 @@
+doctype html
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.innerpage
+            .content-box
+                h2 Дякуємо за замовлення!
+                p Замовлення №123456 прийняте. В найближчий час з Вами зв’яжеться менеджер та підтвердить замовлення.
+                a.button.wide продовжити покупки
+            .catalog
+                h2.text-center Вам може сподобатися
+                .row
+                    include _includes/_catalog_item.pug
+                    +catalog-item('files/img/product-1.jpg','«jola» яблучний мед','large-4','medium-6')
+                    +catalog-item('files/img/product-2.jpg','«jola» яблучний мед','large-4','medium-6','new', 'Новинка')
+                    +catalog-item('files/img/product-3.jpg','«jola» яблучний мед','large-4','medium-6')
+        include _includes/_footer.pug
