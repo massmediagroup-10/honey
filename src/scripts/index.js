@@ -97,12 +97,44 @@ function foundation() {
     $(document).foundation();
 }
 
+function simpleMenu() {
+    $('.simple-menu li').each(function(e) {
+        if ($(this).hasClass('active')) {
+            var target = $(this).find('a').attr('href');
+            $('.account-content').hide();
+            $(target).show();
+        }
+    });
+
+    $(document).on('click', '.simple-menu a', function(e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        $('.simple-menu li').removeClass('active');
+        $(this).closest('li').addClass('active');
+        $('.account-content').hide();
+        $(target).show();
+    });
+}
+
+function accountOrder() {
+    $('.account-order-list').slideUp(0);
+
+    $('.account-order-link').on('click', function(e) {
+        e.preventDefault();
+        var parent = $(this).closest('.account-order-item');
+        parent.toggleClass('active')
+        parent.find('.account-order-list').stop().slideToggle();
+    });
+}
+
 $(document).ready(function() {
     initSlider();
     foundation();
     detailToggle();
     checkoutItem();
     footerplaceholder();
+    simpleMenu();
+    accountOrder();
 
     $('form').each(function() {
         $(this).validate();

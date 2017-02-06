@@ -1,0 +1,38 @@
+doctype html
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.innerpage
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a(href='/') Головна
+                        li
+                            span Особистий кабінет
+
+            .row.account
+                aside.medium-4.large-3.column
+                    .simple-menu
+                        h3
+                            span Особистий кабінет
+                        ul
+                            li
+                                a(href="#personal")
+                                    i.fa.fa-angle-right
+                                    | Мої дані
+                            li
+                                a(href="#recover")
+                                    i.fa.fa-angle-right
+                                    | Зміна паролю
+                            li.active
+                                a(href="#order")
+                                    i.fa.fa-angle-right
+                                    | Замовлення
+                section.medium-8.large-9.column
+                    include _includes/_personal.pug
+                    include _includes/_password.pug
+                    include _includes/_order.pug
+
+        include _includes/_footer.pug

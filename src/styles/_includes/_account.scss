@@ -1,0 +1,52 @@
+.account {
+    &-content {
+        &-footer {
+            margin-top: 20px;
+        }
+    }
+    &-order {
+        &-item {
+            &.active {
+                .fa {
+                    transform: rotate(180deg);
+                }
+            }
+            .fa {
+                float: left;
+                color: #666666;
+                margin-right: 10px;
+                line-height: 20px;
+            }
+        }
+        &-link {
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        &-list {
+            margin-top: 17px;
+            background: #f7f7f7;
+            padding: 15px 15px 15px 15px;
+
+            .order-table-tr {
+                border-bottom: 0;
+            }
+        }
+        .catalog-item {
+            display: inline-block;
+            margin-top: -15px;
+            margin-bottom: 15px;
+            @media #{$medium-up} {
+                float: left;
+            }
+            &-image {
+                width: 165px;
+                height: 165px;
+            }
+        }
+        .detail-price {
+            margin-bottom: 0;
+        }
+        .status {
+        }
+    }
+}

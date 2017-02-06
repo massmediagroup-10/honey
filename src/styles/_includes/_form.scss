@@ -124,6 +124,8 @@
         margin-bottom: 30px;
     }
     label {
+        font-size: 12px;
+        font-weight: bold;
         &.error {
             display: none !important;
         }
