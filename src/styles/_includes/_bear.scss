@@ -1,0 +1,192 @@
+#bear {
+    width: map-get($breakpoints, large);
+    margin: 0 auto;
+    display: block;
+    padding: 1rem 0 3rem;
+    @media (max-width: map-get($breakpoints, xxlarge)) {
+        width: 640px;
+    }
+    @media (max-width: map-get($breakpoints, xlarge)) {
+        width: 100%;
+    }
+}
+
+.bee,
+.cloud {
+    transform-origin: 50% 100%;
+}
+
+@keyframes breeze {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#bee-1 {
+    animation: breeze 1.3s ease-out infinite;
+}
+
+#bee-2 {
+    animation: breeze 1s ease-out infinite;
+}
+
+#bee-3 {
+    animation: breeze 0.9s ease-out infinite;
+}
+
+#bee-4 {
+    animation: breeze 1.2s ease-out infinite;
+}
+
+#bee-5 {
+    animation: breeze 1.2s ease-out infinite;
+}
+
+#bee-6 {
+    animation: breeze 1.2s ease-out infinite;
+}
+
+@keyframes cloud1 {
+    0% {
+        transform: translate(-46.91px, -151.95px);
+    }
+    50% {
+        transform: translate(66.91px, -151.95px);
+    }
+    100% {
+        transform: translate(-46.91px, -151.95px);
+    }
+}
+
+@keyframes cloud2 {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(-100px, 0px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+#cloud-1 {
+    animation: cloud1 35s linear infinite;
+}
+
+#cloud-2 {
+    animation: cloud2 35s linear infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 4px);
+    }
+    80% {
+        transform: translate(0, 6px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#bearhead {
+    animation: shake 6s ease-out infinite;
+}
+
+.cls-1 {
+    fill: #eeb415;
+}
+
+.cls-2 {
+    fill: #ffd6bc;
+}
+
+.cls-13, .cls-3 {
+    fill: #db946e;
+}
+
+.cls-14, .cls-16, .cls-3 {
+    opacity: 0.2;
+}
+
+.cls-4 {
+    opacity: 0.8;
+}
+
+.cls-5 {
+    fill: #fff;
+}
+
+.cls-6 {
+    clip-path: url(#clip-path);
+}
+
+.cls-14, .cls-15, .cls-7 {
+    fill: #454c53;
+}
+
+.cls-8 {
+    clip-path: url(#clip-path-2);
+}
+
+.cls-9 {
+    clip-path: url(#clip-path-3);
+}
+
+.cls-10 {
+    clip-path: url(#clip-path-4);
+}
+
+.cls-11 {
+    clip-path: url(#clip-path-5);
+}
+
+.cls-12 {
+    clip-path: url(#clip-path-6);
+}
+
+.cls-15 {
+    opacity: 0.6;
+}
+
+.cls-17 {
+    fill: none;
+}
+
+.cls-18 {
+    fill: #cb7d5d;
+}
+
+.cls-19 {
+    fill: #e9b182;
+}
+
+.cls-20 {
+    fill: #edc19b;
+}
+
+.nofound-text {
+    font-size: 46px;
+    font-family: "Roboto";
+    font-weight: 900;
+    fill: rgb(255, 138, 112);
+    &.italic {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    &.shadow {
+        fill: #f6d989;
+    }
+}
