@@ -36,10 +36,20 @@
                     i.fa.fa-user
                     span Особистий кабінет
             li
-                a.basket-label
+                a.basket-label(data-toggle="drop-basket",data-options="align:right")
                     i.fa.fa-shopping-basket
                         em.basket-label-count 12
                     span Кошик
+                div#drop-basket.dropdown-pane.dropdown-basket(data-dropdown)
+                    p
+                        | В кошику 12 товарів <br>
+                        | на сумму 1 015 грн.
+                    a.button.block
+                        | Оформити замовлення
+                        i.fa.fa-angle-right
+                    a.button.white.block
+                        i.fa.fa-shopping-basket
+                        span в кошик
 
 nav.navigation
     .row.column

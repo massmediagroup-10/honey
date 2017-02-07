@@ -89,6 +89,21 @@ iframe {
             background: #779e13;
         }
     }
+    &.white {
+        background: #fff;
+        color: $success-color;
+        .fa {
+            position: relative;
+            transition: 300ms all ease;
+        }
+        &:hover {
+            .fa {
+                position: relative;
+                transform: translateX(-2px);
+
+            }
+        }
+    }
     &.outline {
         background:transparent;
         border: 1px solid $primary-color;
