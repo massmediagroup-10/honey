@@ -42,11 +42,9 @@ html
                                         label
                                             | Номер мобільного *
                                             input(type="tel", placeholder="Введіть Ваш номер", required="required")
-                                    .large-4.column
-                                        label &nbsp;
+                                    .large-4.column.plain
                                         input.button.block(type="submit",value="замовити")
-                                    .large-4.column
-                                        label &nbsp;
+                                    .large-4.column.plain
                                         p.important
                                             span Менеджер Вам зателефонує та уточнить деталі
                     .checkout-item.form
@@ -65,10 +63,19 @@ html
                                         label
                                             | Пароль
                                             input(type="password",placeholder="Your password", required="required")
-                                    .large-4.column
-                                        label &nbsp;
+                                    .large-4.column.plain
                                         input.button.block(type="submit",value="увійти")
-                                        a.float-right Забули пароль?
+                                        a.float-right(data-open="forgotpass") Забули пароль?
+                                .row
+                                    .form-label.column Або увійдіть через
+                                    .large-4.column
+                                        a.button.block.facebook
+                                            i.fa.fa-facebook
+                                            span Facebook
+                                    .large-4.column.end
+                                        a.button.block.vk
+                                            i.fa.fa-vk
+                                            span вконтакте
                     .checkout-item.form
                         form(name="new_customer")
                             .checkout-title
@@ -150,5 +157,16 @@ html
                                 .row
                                     .large-4.column
                                         input.button.block(type="submit",value="замовити")
+
+        #forgotpass.reveal.xsmall(data-reveal='',data-options="showDelay:300; hideDelay:300")
+            a.reveal-close(aria-label='Close', data-close)
+                i.fa.fa-close
+            h2.text-center Забули пароль?
+            .form
+                input(type="email",placeholder="Введіть Ваш email", required="required")
+                p.form-hint
+                    | Введіть Ваш email, щоб ми відновили Ваш
+                    | пароль.
+                input.button.block.accented(type="submit",value="відновити пароль")
 
         include _includes/_footer.pug

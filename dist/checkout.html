@@ -92,12 +92,10 @@
                       <input type="tel" placeholder="Введіть Ваш номер" required="required">
                     </label>
                   </div>
-                  <div class="large-4 column">
-                    <label>&nbsp;</label>
+                  <div class="large-4 column plain">
                     <input class="button block" type="submit" value="замовити">
                   </div>
-                  <div class="large-4 column">
-                    <label>&nbsp;</label>
+                  <div class="large-4 column plain">
                     <p class="important"><span>Менеджер Вам зателефонує та уточнить деталі</span></p>
                   </div>
                 </div>
@@ -119,10 +117,14 @@
                       <input type="password" placeholder="Your password" required="required">
                     </label>
                   </div>
-                  <div class="large-4 column">
-                    <label>&nbsp;</label>
-                    <input class="button block" type="submit" value="увійти"><a class="float-right">Забули пароль?</a>
+                  <div class="large-4 column plain">
+                    <input class="button block" type="submit" value="увійти"><a class="float-right" data-open="forgotpass">Забули пароль?</a>
                   </div>
+                </div>
+                <div class="row">
+                  <div class="form-label column">Або увійдіть через</div>
+                  <div class="large-4 column"><a class="button block facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a></div>
+                  <div class="large-4 column end"><a class="button block vk"><i class="fa fa-vk"></i><span>вконтакте</span></a></div>
                 </div>
               </div>
             </form>
@@ -231,6 +233,17 @@
         </div>
       </div>
     </main>
+    <div class="reveal xsmall" id="forgotpass" data-reveal="" data-options="showDelay:300; hideDelay:300"><a class="reveal-close" aria-label="Close" data-close><i class="fa fa-close"></i></a>
+      <h2 class="text-center">Забули пароль?</h2>
+      <div class="form">
+        <input type="email" placeholder="Введіть Ваш email" required="required">
+        <p class="form-hint">
+          Введіть Ваш email, щоб ми відновили Ваш
+          пароль.
+        </p>
+        <input class="button block accented" type="submit" value="відновити пароль">
+      </div>
+    </div>
     <div class="footer_placeholder"></div>
     <footer class="footer">
       <nav class="navigation">

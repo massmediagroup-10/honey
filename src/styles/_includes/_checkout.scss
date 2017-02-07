@@ -60,15 +60,23 @@
     }
     &-body {
         padding-left: 28px;
-        a {
+        margin-bottom: 20px;
+        @media #{$large-up} {
+            margin-bottom: 0px;
+        }
+        a:not(.button) {
             text-decoration: underline;
             font-size: 12px;
             margin-top: -8px;
             color: $lighter-gray;
+            float: left;
             &:hover {
                 text-decoration: none;
                 color: $medium-gray;
             }
+        }
+        .plain {
+            padding-top: rem-calc(24px);
         }
         p {
             font-size: 12px;
