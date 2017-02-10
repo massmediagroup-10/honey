@@ -104,7 +104,7 @@
         font-size: 12px;
         font-weight: bold;
         display: table;
-        z-index: 10;
+        z-index: 1;
         &:before {
             content: '';
             position: absolute;
@@ -168,7 +168,7 @@
                 margin-bottom: 0px;
             }
         }
-        a {
+        .link-remove {
             display: inline-block;
             vertical-align: middle;
             margin-right: 13px;

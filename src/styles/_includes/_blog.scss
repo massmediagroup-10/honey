@@ -1,12 +1,15 @@
 .blog {
     h2 {
-        font-size: rem-calc(45px);
         font-weight: 900;
         text-transform: uppercase;
         color: #fff;
         margin-bottom: 0;
         text-align: center;
         margin-bottom: rem-calc(39px);
+        font-size: rem-calc(35px);
+        @media #{$large-up} {
+            font-size: rem-calc(45px);
+        }
         span {
             display: block;
             margin-bottom: 16px;
@@ -21,6 +24,9 @@
         }
         .icon {
             display: block;
+            img {
+                width: auto;
+            }
         }
     }
     &-preview {
@@ -28,11 +34,13 @@
         text-align: center;
         overflow: hidden;
         &:hover {
-            img {
-                transform: scale(1.05) rotate(0.5deg);
-            }
-            &:before {
-                background: rgba(0, 0, 0, 0.45);
+            @media #{$large-up} {
+                img {
+                    transform: scale(1.05) rotate(0.5deg);
+                }
+                &:before {
+                    background: rgba(0, 0, 0, 0.45);
+                }
             }
         }
         &:before {
@@ -87,7 +95,10 @@
             color: map-get($foundation-palette, secondary);
             font-size: 12px;
             margin: 0px auto 30px auto;
-            width: 60%;
+            padding: 0 $gutter-medium;
+            @media #{$large-up} {
+                width: 60%;
+            }
         }
     }
     &-video {

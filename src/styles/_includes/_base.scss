@@ -95,14 +95,10 @@ iframe {
         color: $success-color;
         .fa {
             position: relative;
-            transition: 300ms all ease;
         }
         &:hover {
-            .fa {
-                position: relative;
-                transform: translateX(-2px);
-
-            }
+            background-color: #d99241;
+            color: #fff;
         }
     }
     &.outline {

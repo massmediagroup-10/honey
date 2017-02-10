@@ -127,7 +127,10 @@
 .navigation {
     background: #fff;
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    @media #{$large-up} {
+        z-index: 2;
+    }
     .menu {
         display: table;
         width: 100%;

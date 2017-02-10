@@ -127,6 +127,18 @@ function accountOrder() {
     });
 }
 
+function filterToggle() {
+    var filter = $('.filter');
+    $(document).on('click', '.filter-toggle', function() {
+        filter.toggleClass('active');
+    });
+
+    var hammertime = new Hammer(document.getElementById('filter'));
+    hammertime.on('swipeleft', function() {
+        filter.removeClass('active');
+    });
+}
+
 $(document).ready(function() {
     initSlider();
     foundation();
@@ -135,6 +147,7 @@ $(document).ready(function() {
     footerplaceholder();
     simpleMenu();
     accountOrder();
+    filterToggle();
 
     $('form').each(function() {
         $(this).validate();
