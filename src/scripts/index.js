@@ -55,6 +55,27 @@ function initSlider() {
             }
         }]
     });
+    $('.preview-list').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        arrows: false,
+        prevArrow: '<a href="#" class="slick-prev"><i class="fa fa-chevron-left"></i></a>',
+        nextArrow: '<a href="#" class="slick-next"><i class="fa fa-chevron-right"></i></a>',
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                arrows: true,
+                slidesToShow: 2
+            }
+        }, {
+            breakpoint: 600,
+            settings: {
+                arrows: true,
+                slidesToShow: 1
+            }
+        }]
+    });
 }
 
 function detailToggle() {
@@ -133,9 +154,51 @@ function filterToggle() {
         filter.toggleClass('active');
     });
 
-    var hammertime = new Hammer(document.getElementById('filter'));
-    hammertime.on('swipeleft', function() {
-        filter.removeClass('active');
+    if ($('#filter').length) {
+        var hammertime = new Hammer(document.getElementById('filter'));
+        hammertime.on('swipeleft', function() {
+            filter.removeClass('active');
+        });
+    }
+}
+
+function isMobile() {
+    return ($(window).width() < 1025) ? true : false;
+}
+
+function mobileMenu() {
+    if (isMobile()) {
+        $('.submenu').slideUp(0);
+        $('.navigation-collapse').slideUp(0);
+    }
+
+    $(document).on('click', '.menu-toggle', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.navigation-collapse').stop().slideToggle();
+    });
+
+    $(document).on('click', '.submenu-link', function(e) {
+        if (isMobile()) {
+            e.preventDefault();
+            $(this).toggleClass('collapsed');
+            $(this).siblings('.submenu').stop().slideToggle();
+        }
+    });
+
+    $(window).resize(function() {
+        if (!isMobile()) {
+            $('.submenu').attr('style', '');
+            $('.navigation-collapse').slideDown(0);
+            $('.navigation-collapse').attr('style', '');
+        } else {
+            if ($('.navigation-collapse').is(':visible')) {
+                $('.menu-toggle').addClass('active');
+            } else {
+                $('.menu-toggle').removeClass('active');
+                $('.submenu-link').removeClass('collapsed');
+            }
+        }
     });
 }
 
@@ -148,6 +211,7 @@ $(document).ready(function() {
     simpleMenu();
     accountOrder();
     filterToggle();
+    mobileMenu();
 
     $('form').each(function() {
         $(this).validate();

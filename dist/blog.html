@@ -13,9 +13,9 @@
   </head>
   <body class="starterkit">
     <div class="header-main row expanded column">
-      <div class="header-contacts large-4 column"><a class="item-contact"><i class="fa fa-odnoklassniki"></i></a><a class="item-contact"><i class="fa fa-twitter"></i></a><a class="item-contact"><i class="fa fa-instagram"></i></a><a class="item-contact"><i class="fa fa-facebook"></i></a><a class="item-contact"><i class="fa fa-vk"></i></a><a class="item-contact"><i class="fa fa-youtube-play"></i></a><a class="item-contact extreme-contact"><i class="fa fa-phone"></i>+38 063 365 25 32</a></div>
+      <div class="header-contacts large-4 column show-for-large"><a class="item-contact"><i class="fa fa-odnoklassniki"></i></a><a class="item-contact"><i class="fa fa-twitter"></i></a><a class="item-contact"><i class="fa fa-instagram"></i></a><a class="item-contact"><i class="fa fa-facebook"></i></a><a class="item-contact"><i class="fa fa-vk"></i></a><a class="item-contact"><i class="fa fa-youtube-play"></i></a><a class="item-contact extreme-contact"><i class="fa fa-phone"></i>+38 063 365 25 32</a></div>
       <div class="header-logo large-4 column text-center"><a href="/"><img src="files/img/logo.png" alt=""></a></div>
-      <div class="header-menu large-4 column medium-text-right">
+      <div class="header-menu large-4 column medium-text-right show-for-large">
         <ul>
           <li><a data-toggle="drop1"><span>Укр</span><i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></a>
             <ul class="dropdown-pane" id="drop1" data-dropdown>
@@ -37,20 +37,26 @@
     </div>
     <nav class="navigation">
       <div class="row column">
-        <ul class="vertical medium-horizontal menu">
-          <li><a>Головна</a></li>
-          <li><a>Про компанію</a></li>
-          <li><a>про користь меду</a>
-            <ul class="submenu">
-              <li><a><span>Детальна сторінка про головне</span></a></li>
-              <li><a><span>Детальна сторінка 2</span></a></li>
-            </ul>
-          </li>
-          <li><a>мед та органічні продукти</a></li>
-          <li><a>Оплата</a></li>
-          <li><a>Доставка</a></li>
-          <li><a>Контакти</a></li>
-        </ul>
+        <div class="navigation-panel"><a class="menu-toggle" href="#"><i class="fa fa-bars"></i><i class="fa fa-close"></i></a>
+          <div class="navigation-panel-icons float-right"><a href="#"><i class="fa fa-user"></i></a><a class="basket-label" data-toggle="drop-basket" data-options="align:right" href="#"><i class="fa fa-shopping-basket"><em class="basket-label-count">12</em></i></a></div>
+        </div>
+        <div class="navigation-collapse">
+          <ul class="medium-horizontal menu">
+            <li><a>Головна</a></li>
+            <li><a>Про компанію</a></li>
+            <li><a class="submenu-link">про користь меду</a>
+              <ul class="submenu">
+                <li><a><span>Детальна сторінка про головне</span></a></li>
+                <li><a><span>Детальна сторінка 2</span></a></li>
+              </ul>
+            </li>
+            <li><a>мед та органічні продукти</a></li>
+            <li><a>Оплата</a></li>
+            <li><a>Доставка</a></li>
+            <li><a>Контакти</a></li>
+            <li class="lang-link"><a class="active">Укр</a><a>Eng</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <main class="blog">

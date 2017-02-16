@@ -21,9 +21,11 @@
     &.slick-initialized {
         .slick-current.slick-active {
             img {
-                animation-name: scaleimage;
-                animation-duration: 12s;
-                animation-iteration-count: infinite;
+                @media #{$large-up} {
+                    animation-name: scaleimage;
+                    animation-duration: 12s;
+                    animation-iteration-count: infinite;
+                }
             }
         }
     }

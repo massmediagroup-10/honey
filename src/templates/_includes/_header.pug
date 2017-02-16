@@ -1,5 +1,5 @@
 .header-main.row.expanded.column
-    .header-contacts.large-4.column
+    .header-contacts.large-4.column.show-for-large
         a.item-contact
             i.fa.fa-odnoklassniki
         a.item-contact
@@ -18,7 +18,7 @@
     .header-logo.large-4.column.text-center
         a(href='/')
             img(src='files/img/logo.png', alt='')
-    .header-menu.large-4.column.medium-text-right
+    .header-menu.large-4.column.medium-text-right.show-for-large
         ul
             li
                 a(data-toggle="drop1")
@@ -53,27 +53,41 @@
 
 nav.navigation
     .row.column
-        ul.vertical.medium-horizontal.menu
-            li
-                a
-                    | Головна
-            li
-                a Про компанію
-            li
-                a
-                    | про користь меду
-                ul.submenu
-                    li
-                        a
-                            span Детальна сторінка про головне
-                    li
-                        a
-                            span Детальна сторінка 2
-            li
-                a мед та органічні продукти
-            li
-                a Оплата
-            li
-                a Доставка
-            li
-                a Контакти
+        .navigation-panel
+            a.menu-toggle(href="#")
+                i.fa.fa-bars
+                i.fa.fa-close
+            .navigation-panel-icons.float-right
+                a(href='#')
+                    i.fa.fa-user
+                a.basket-label(data-toggle="drop-basket",data-options="align:right",href='#')
+                    i.fa.fa-shopping-basket
+                        em.basket-label-count 12
+        .navigation-collapse
+            ul.medium-horizontal.menu
+                li
+                    a
+                        | Головна
+                li
+                    a Про компанію
+                li
+                    a.submenu-link
+                        | про користь меду
+                    ul.submenu
+                        li
+                            a
+                                span Детальна сторінка про головне
+                        li
+                            a
+                                span Детальна сторінка 2
+                li
+                    a мед та органічні продукти
+                li
+                    a Оплата
+                li
+                    a Доставка
+                li
+                    a Контакти
+                li.lang-link
+                    a.active Укр
+                    a Eng
