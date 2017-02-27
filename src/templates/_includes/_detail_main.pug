@@ -12,7 +12,7 @@
             a.button.small(href='#')
                 i.fa.fa-shopping-cart
                 | ДОДАТИ В КОШИК
-            a.button.outline.small(href='#')
+            a.button.outline.small(data-open="fastshopping")
                 | купити в 1 клік
     .detail-description.tabs
         .tabs-item
@@ -31,3 +31,13 @@
                 iframe(width='560', height='315', src='https://www.youtube.com/embed/16SMpTXpuuY', frameborder='0', allowfullscreen='')
         .tabs-item
             h5 Доставка та оплата
+
+#fastshopping.reveal.xsmall(data-reveal='',data-options="showDelay:300; hideDelay:300")
+    a.reveal-close(aria-label='Close', data-close)
+        i.fa.fa-close
+    h2.text-center Купити в один клік
+    .form
+        input(type="email",placeholder="Введіть Ваш номер", required="required")
+        p.form-hint
+            | Введіть номер телефону <br> для замовлення в 1 клік
+        input.button.block.accented(type="submit",value="Купити")

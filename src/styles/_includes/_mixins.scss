@@ -19,6 +19,13 @@
     align-items: $align;
 }
 
+%vfix {
+    height: 100%;
+    width: 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 %clear:after {
     content: '';
     clear: both;
