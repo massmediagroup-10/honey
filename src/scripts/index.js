@@ -235,6 +235,16 @@ function mobileMenu() {
     });
 }
 
+function scrollHandler() {
+    var ofcontent = $('.header-line').offset();
+    var top_sctoll = $(document).scrollTop();
+    if ((top_sctoll) > ofcontent.top) {
+        $('.header').addClass('fixed');
+    } else {
+        $('.header').removeClass('fixed');
+    }
+}
+
 $(document).ready(function() {
     initSlider();
     foundation();
@@ -245,12 +255,16 @@ $(document).ready(function() {
     accountOrder();
     filterToggle();
     mobileMenu();
+    scrollHandler();
 
     $('form').each(function() {
         $(this).validate();
     });
 
-    $(window).resize(function() {
+    $(window).on('resize', function() {
         footerplaceholder();
+    });
+    $(window).on('scroll', function() {
+        scrollHandler();
     });
 });

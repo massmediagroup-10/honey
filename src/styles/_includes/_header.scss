@@ -1,19 +1,26 @@
 .header {
-    padding: 13px 0 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
+    position: relative;
+    z-index: 4;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+
+    @media #{$max-large} {
+        position: static;
+    }
     &.fixed {
-        padding-top: 5px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         .header-main {
-            margin-bottom: 5px;
         }
         .header-logo {
-            height: 53px;
+            height: 80px;
             img {
             }
+        }
+        .menu>li>a {
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
     }
     &-main {
@@ -140,6 +147,7 @@
     background: #fff;
     position: relative;
     z-index: 1;
+    width: 100%;
     @media #{$large-up} {
         z-index: 2;
     }
