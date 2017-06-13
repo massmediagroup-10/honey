@@ -1,3 +1,29 @@
+$header-article-sizes: (
+    small: (
+        'h1': 30,
+        'h2': 28,
+        'h3': 26,
+        'h4': 24,
+        'h5': 22,
+        'h6': 20,
+    ),
+    medium: (
+        'h1': 30,
+        'h2': 28,
+        'h3': 26,
+        'h4': 24,
+        'h5': 22,
+        'h6': 20,
+    ),
+);
+$headings: h1, h2, h3, h4, h5, h6;
+@mixin header-article-size($type){
+    font-size: rem-calc(map_get(map_get($header-article-sizes, "small"),$type) * 1px);
+    @include breakpoint(medium){
+        font-size: rem-calc(map_get(map_get($header-article-sizes, "medium"),$type) * 1px);
+    }
+}
+
 .content {
     font-family: $roboto;
     margin-bottom: 50px;
@@ -6,20 +32,60 @@
         padding-bottom: 35px;
         margin-bottom: 20px;
         border-bottom: 1px solid #e3e3e3;
+        font-size: $article-font-size;
+        font-family: $regal;
+
+        @each $heading in $headings {
+            #{$heading}:not(.article-title) {
+                font-family: $regal;
+                @include header-article-size(#{$heading});
+                margin-bottom: 1.1em;
+            }
+        }
         p {
-            line-height: 1.8em;
-            margin: 1em 0 1.5em 0;
+            font-family: 'PFRegalTextPro-RegularB';
+            line-height: 1.2em;
+            margin: 1em 0 1.2em 0;
+            font-size: $article-font-size;
+            color: map-get($foundation-palette, secondary);
         }
         ul {
             margin-bottom: 21px;
-            padding-left: 16px;
+            padding-left: 50px;
             li {
                 line-height: 24px;
                 list-style: disc;
+                text-align: left;
+            }
+        }
+        ol {
+            li {
+                line-height: 24px;
+                text-align: left;
             }
         }
         img {
             margin-bottom: 18px;
+        }
+        &>img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .blog-cell {
+            p {
+                width: 100%;
+                text-align: left;
+                color: $primary-color;
+                font-size: $article-font-size;
+            }
+            img {
+                padding: 0 $gutter-medium;
+            }
+        }
+        &.single {
+            padding-right: 0;
+            padding-left: 0;
         }
     }
     .sidebar {
@@ -37,7 +103,7 @@
                     line-height: 23px;
                     margin-bottom: 12px;
                     a {
-                        @extend  .fa-angle-right;
+                        @extend .fa-angle-right;
                         padding-left: 24px;
                         position: relative;
                         &:before {
@@ -61,8 +127,12 @@
         &-articles {
             ul {
                 li {
+                    border-bottom: 1px solid #e3e3e3;
                     @extend %clear;
-                    margin-bottom: 20px;
+                    padding: 20px 0;
+                    &:last-child {
+                        border-bottom: none;
+                    }
                     img {
                         float: left;
                     }
@@ -72,7 +142,7 @@
                         font-weight: bold;
                         margin-left: 131px;
                         line-height: 19px;
-                        margin-bottom: 9px;
+                        margin-bottom: 0;
                         color: $dark-gray;
                         & > a {
                             margin-bottom: 3px;
@@ -80,6 +150,39 @@
                         }
                         .tags {
                             display: block;
+                        }
+                    }
+                    &>p {
+                        font-family: $roboto;
+                        font-size: 13px;
+                        margin-left: 131px;
+                        line-height: 19px;
+                        margin-bottom: 0;
+                        color: $dark-gray;
+                    }
+                    .price-cart_button {
+                        overflow: hidden;
+                        float: left;
+                        margin-left: 32px;
+                        margin-top: 18px;
+                        i {
+                            font-size: 20px;
+                            color: #ffffff;
+                            background: #f5a64a;
+                            padding: 4px 10px;
+                            float: left;
+                            margin-left: 25px;
+                            border: 1px solid rgba(0,0,0,0.12);
+                            &:hover {
+                                color: #f5a64a;
+                                background: #ffffff;
+                            }
+                        }
+                        p {
+                            display: inline-block;
+                            float: left;
+                            padding-top: 6px;
+                            color: #f5a64a;
                         }
                     }
                 }

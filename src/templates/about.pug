@@ -1,0 +1,55 @@
+doctype html
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.innerpage
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a(href='/') Головна
+                        li
+                            span Про компанію
+            .about.row
+                .column
+                    h2 Honey UA – корисна платформа про найкорисніший продукт
+                    p Інформаційна платформа створена для тих, хто піклується про своє здоров’я, гарне самопочуття та фізичну форму. Ми залучаємо до співпраці фахівців з різних галузей, щоб надати перевірену інформацію.
+                    .about-images
+                        .about-images-item
+                            .about-images-inner
+                                i.sprite-honey.icon-bee
+                                p
+                                    | Корисні для здоров'я
+                                    | продукти, створенні
+                                    | природою
+                        .about-images-item
+                            .about-images-inner
+                                i.sprite-honey.icon-mahogany
+                                p
+                                    | Сучасні системи
+                                    | харчування та рецепти
+                                    | смачних страв
+                        .about-images-item
+                            .about-images-inner
+                                i.sprite-honey.icon-honey
+                                p
+                                    | Поради, як досягти
+                                    | стрункої форми
+                                    | й зберегти красу
+                        .about-images-item
+                            .about-images-inner
+                                i.sprite-honey.icon-bottle
+                                p
+                                    | Ефективні засоби
+                                    | профілактики
+                                    | захворювань
+                    h2 Інтернет-магазин органічного меду та продуктів бджільництва
+                    .row
+                        .medium-8.column
+                            p Ми гарантуємо високу якість меду та продуктів бджільництва, що представлені на сайті Honey UA. Адже співпрацюємо виключно з тими виробниками, які ретельно контролюють весь виробничий цикл від кожного вулика до упаковки. Компанії-виробники працюють за державним стандартом ДСТУ 4497:2005 та мають міжнародний сертифікат FSSC 22000 (об’єднаний стандарт ISO та HACCP).
+                        .medium-4.column
+                            img(src='./files/img/about-logos.png')
+
+
+        include _includes/_footer.pug

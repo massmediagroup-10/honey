@@ -67,90 +67,49 @@
         <div class="breadcrumbs">
           <ul>
             <li><a href="/">Головна</a></li>
-            <li><a href="#">Мед та органічні продукти</a></li>
-            <li><span>«jola» яблучний мед</span></li>
+            <li><span>Контакти</span></li>
           </ul>
         </div>
       </div>
-      <div class="row detail-top">
-        <div class="detail-left large-6 column">
-          <div class="detail-slider">
-            <div class="detail-slider-main">
-              <div class="catalog-label new"><span>Новинка</span></div>
-              <div class="detail-slider-for">
-                <div><img src="files/img/product-4.jpg"></div>
-                <div><img src="http://placehold.it/400x470/ffffff/000000?text=2"></div>
-                <div><img src="http://placehold.it/400x400/ffffff/000000?text=3"></div>
-                <div><img src="http://placehold.it/400x400/ffffff/000000?text=4"></div>
-                <div><img src="http://placehold.it/400x400/ffffff/000000?text=5"></div>
+      <div class="contacts row">
+        <div class="column">
+          <h2> Контакти</h2>
+          <div class="row">
+            <div class="contacts-list large-3 column">
+              <div class="contacts-item">
+                <h5>Графік роботи</h5>
+                <h6>Понеділок - П’ятниця</h6>
+                <h6>з 10:00  до 19:00</h6>
+              </div>
+              <div class="contacts-item">
+                <h5>Консультації та замовлення</h5>
+                <h6>+38  044  228  83  41</h6>
+                <h6>beehoneyua@gmail.com</h6>
+              </div>
+              <div class="contacts-item">
+                <h5>Адреса</h5>
+                <h6>м. Дніпро</h6>
+                <h6>вул. Козирєва, буд.62</h6>
               </div>
             </div>
-            <div class="detail-slider-nav">
-              <div>
-                <div class="slider-img"><img src="http://placehold.it/110x110/ffffff/000000?text=1"></div>
-              </div>
-              <div>
-                <div class="slider-img"><img src="http://placehold.it/110x110/ffffff/000000?text=2"></div>
-              </div>
-              <div>
-                <div class="slider-img"><img src="http://placehold.it/110x110/ffffff/000000?text=3"></div>
-              </div>
-              <div>
-                <div class="slider-img"><img src="http://placehold.it/110x110/ffffff/000000?text=4"></div>
-              </div>
-              <div>
-                <div class="slider-img"><img src="http://placehold.it/110x110/ffffff/000000?text=5"></div>
-              </div>
+            <div class="large-8 small-offset-1 column">
+              <div id="map"></div>
+              <script>
+                function initMap() {
+                    var uluru = {lat: -25.363, lng: 131.044};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 15,
+                        center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map,
+                        icon: './files/img/icon-map.png'
+                    });
+                }
+              </script>
+              <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_pPIt2Mvi85NV3ZKOqTLMllHAF5urWy4&amp;callback=initMap"></script>
             </div>
-          </div>
-          <div class="detail-share">
-            <p>Поділитися з друзями:</p>
-            <p><img src="files/img/social-fake.png"></p>
-          </div>
-        </div>
-        <div class="detail-main large-6 column">
-          <h2>«JOLA» яблучний мед</h2>
-          <p>Артикул 012543</p>
-          <div class="detail-price"><span>112.00 ₴</span><span class="old">112.00 ₴</span></div>
-          <div class="detail-actions form">
-            <div class="detail-size">
-              <label for="size">Кількість</label>
-              <input type="number" id="size" min="1">
-            </div>
-            <div class="detail-buy"><a class="button small" href="#"><i class="fa fa-shopping-cart"></i>ДОДАТИ В КОШИК</a><a class="button outline small" data-open="fastshopping">купити в 1 клік</a></div>
-          </div>
-          <div class="detail-description tabs">
-            <div class="tabs-item">
-              <h5>Характеристики</h5>
-              <div class="tabs-item-inner">
-                <p>
-                  Назва меду говорить за себе - цей мед бджоли добувають з нектару польових і лісових квітів, які розцвітають теплою весною. Такий мед дуже багатий за складом, так як містить всі вітаміни, мінерали та мікроелементи цих рослин. <br/>
-                  Травневий мед має складний склад і є найкращим сортом меду як в якості харчової добавки в щоденному раціоні, так і лікарського засобу:
-                  вітаміни групи В - відповідають за метаболізм, дають енергію, зміцнюють нервову систему вітамін С - потужний антиоксидант, уповільнює старіння, прискорює загоєння, укріплює імунітет, бореться з вірусами ферменти інвертаза (з її допомогою бджоли роблять з нектару мед; розщеплює цукор на фруктозу і глюкозу), каталаза (необхідна для захисту клітинних структур) і амілаза (травний фермент) молочна кислота - регулятор обміну в організмі глюконовая кислота активізує обмін речовин, підвищує працездатність м'язів мінерали (залізо, калій, кальцій, фосфор) - необхідні в раціоні людини.
-                </p>
-                <ul>
-                  <li>Вага: 250 гр</li>
-                  <li>Упаковка: Тюбик</li>
-                </ul>
-              </div>
-            </div>
-            <div class="tabs-item">
-              <h5>Відеоогляд</h5>
-              <div class="tabs-item-inner">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/16SMpTXpuuY" frameborder="0" allowfullscreen=""></iframe>
-              </div>
-            </div>
-            <div class="tabs-item">
-              <h5>Доставка та оплата</h5>
-            </div>
-          </div>
-        </div>
-        <div class="reveal xsmall" id="fastshopping" data-reveal="" data-options="showDelay:300; hideDelay:300"><a class="reveal-close" aria-label="Close" data-close><i class="fa fa-close"></i></a>
-          <h2 class="text-center">Купити в один клік</h2>
-          <div class="form">
-            <input type="email" placeholder="Введіть Ваш номер" required="required">
-            <p class="form-hint">Введіть номер телефону <br> для замовлення в 1 клік</p>
-            <input class="button block accented" type="submit" value="Купити">
           </div>
         </div>
       </div>

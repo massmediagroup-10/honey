@@ -1,9 +1,29 @@
 .detail {
+    &-wrap {
+        overflow: hidden;
+        margin-bottom: 10px;
+        padding: 4px;
+        margin-top: 30px;
+    }
     &-top {
         margin-bottom: rem-calc(73);
+        .product-description-editor {
+            overflow: auto;
+            p {
+                margin-bottom: 1em;
+                clear: both;
+            }
+            ul, ol, dl {
+                padding-left: $list-padding;
+                margin-bottom: 1em;
+            }
+        }
     }
     &-recommend {
         margin-bottom: 47px;
+    }
+    &-description {
+        margin-bottom: 30px;
     }
     &-main {
         h2 {
@@ -30,11 +50,22 @@
             margin-bottom: 13px;
         }
     }
+    &-short-description {
+        padding-top: 20px;
+        p {
+            margin-bottom: 1em;
+        }
+        ul, ol, dl {
+            padding-left: $list-padding;
+            margin-bottom: 1em;
+        }
+    }
     &-price {
-        margin-bottom: 36px;
+        overflow: hidden;
+        float: left;
         font-family: $roboto;
         span {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             display: inline-block;
             vertical-align: middle;
@@ -74,12 +105,11 @@
     }
 
     &-size {
-        margin-bottom: 1rem;
-        margin-top: -24px;
-        margin-right: 25px;
-        width: 98px;
+        width: 72px;
         display: inline-block;
         vertical-align: middle;
+        float: left;
+        margin-left: 30px;
         input {
             margin-bottom: 0;
         }

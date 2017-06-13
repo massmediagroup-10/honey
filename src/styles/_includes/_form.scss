@@ -32,6 +32,10 @@
         text-align: center;
         position: relative;
         top: -1px;
+        cursor: pointer;
+        &.disable {
+            border-color: #de6262;
+        }
         .fa {
             display: none;
             color: #595959;
@@ -146,4 +150,5 @@ select {
     font-size: 12px;
     background-image: url(../files/img/select.png);
     padding-right: 19px;
+    background-position: right -1.1rem center;
 }

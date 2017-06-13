@@ -28,7 +28,6 @@
             @include display-flex(center, center);
         }
         h5 {
-            text-transform: uppercase;
             font-family: $roboto;
         }
         &-price {
@@ -43,6 +42,7 @@
                 height: 90px;
                 float: left;
                 width: calc(50%);
+                min-width: auto;
                 border-right: 1px solid #fff;
                 position: relative;
                 .fa {
@@ -184,6 +184,9 @@
         }
         .form {
             padding-top: 5px;
+        }
+        &-order_select {
+            width: auto!important;
         }
     }
     &-empty {

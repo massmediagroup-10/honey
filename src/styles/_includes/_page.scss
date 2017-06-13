@@ -1,0 +1,28 @@
+.page {
+    padding-right: 22px;
+    padding-bottom: 35px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e3e3e3;
+    &-title {
+        margin-top: 25px;
+    }
+    &-image {
+        max-height: 500px;
+        overflow: hidden;
+        margin: 20px;
+    }
+    &-text {
+        p {
+          font-family: 'PFRegalTextPro-RegularB';
+          line-height: 1.2em;
+          margin: 0.1em 0 0.5em 0;
+          font-size: 19px;
+        }
+    }
+    ul {
+        list-style-type: none;
+        li {
+            list-style-type: disc;
+        }
+    }
+}

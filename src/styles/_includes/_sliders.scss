@@ -1,4 +1,5 @@
 .preview-slider {
+    padding: 0;
     .slick-slide {
         position: relative;
     }
@@ -35,6 +36,13 @@
         }
         to {
             transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        }
+    }
+    &-text {
+        &>.button {
+            position: absolute;
+            z-index: 9999;
+            left: 32%;
         }
     }
 }
@@ -79,5 +87,15 @@
     }
     img {
         margin: 0 auto;
+    }
+}
+
+.preview .preview-item-image>img {
+    height: 240px;
+}
+
+.latest-slider {
+    .catalog-item-description .button em {
+        font-size: 12px;
     }
 }

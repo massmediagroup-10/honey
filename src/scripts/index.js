@@ -245,7 +245,15 @@ function scrollHandler() {
     }
 }
 
+function pageHeight() {
+    var minHeight = $(window).height();
+    $('main').css({
+        'minHeight': minHeight
+    })
+}
+
 $(document).ready(function() {
+    pageHeight();
     initSlider();
     foundation();
     detailToggle();
@@ -256,6 +264,7 @@ $(document).ready(function() {
     filterToggle();
     mobileMenu();
     scrollHandler();
+    pageHeight();
 
     $('form').each(function() {
         $(this).validate();

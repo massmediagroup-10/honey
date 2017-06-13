@@ -1,0 +1,48 @@
+doctype html
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.innerpage
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a(href='/') Головна
+                        li
+                            span Контакти
+            .contacts.row
+                .column
+                    h2  Контакти
+                    .row
+                        .contacts-list.large-3.column
+                            .contacts-item
+                                h5 Графік роботи
+                                h6 Понеділок - П’ятниця
+                                h6 з 10:00  до 19:00
+                            .contacts-item
+                                h5 Консультації та замовлення
+                                h6 +38  044  228  83  41
+                                h6 beehoneyua@gmail.com
+                            .contacts-item
+                                h5 Адреса
+                                h6 м. Дніпро
+                                h6 вул. Козирєва, буд.62
+                        .large-8.small-offset-1.column
+                            #map
+                            script.
+                                function initMap() {
+                                    var uluru = {lat: -25.363, lng: 131.044};
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 15,
+                                        center: uluru
+                                    });
+                                    var marker = new google.maps.Marker({
+                                        position: uluru,
+                                        map: map,
+                                        icon: './files/img/icon-map.png'
+                                    });
+                                }
+                            script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD_pPIt2Mvi85NV3ZKOqTLMllHAF5urWy4&callback=initMap')
+
+        include _includes/_footer.pug

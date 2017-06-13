@@ -235,17 +235,25 @@ function mobileMenu() {
     });
 }
 
-function scrollHandler(){
-    var ofcontent=$('.header-line').offset();
+function scrollHandler() {
+    var ofcontent = $('.header-line').offset();
     var top_sctoll = $(document).scrollTop();
-    if ((top_sctoll)>ofcontent.top){
+    if ((top_sctoll) > ofcontent.top) {
         $('.header').addClass('fixed');
     } else {
         $('.header').removeClass('fixed');
     }
 }
 
+function pageHeight() {
+    var minHeight = $(window).height();
+    $('main').css({
+        'minHeight': minHeight
+    })
+}
+
 $(document).ready(function() {
+    pageHeight();
     initSlider();
     foundation();
     detailToggle();
@@ -256,6 +264,7 @@ $(document).ready(function() {
     filterToggle();
     mobileMenu();
     scrollHandler();
+    pageHeight();
 
     $('form').each(function() {
         $(this).validate();
@@ -268,7 +277,6 @@ $(document).ready(function() {
         scrollHandler();
     });
 });
-
 /*! jQuery Validation Plugin - v1.16.0 - 12/2/2016
  * http://jqueryvalidation.org/
  * Copyright (c) 2016 Jörn Zaefferer; Licensed MIT */

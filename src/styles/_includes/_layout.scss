@@ -40,8 +40,6 @@ main {
 }
 
 .innerpage {
-    border-top: 2px solid #f3f3f3;
-    padding-top: 15px;
 }
 
 .heading-additional {
@@ -59,6 +57,7 @@ main {
 }
 
 .breadcrumbs {
+    margin-top: 20px;
     margin-bottom: 28px;
     li {
         text-transform: none;

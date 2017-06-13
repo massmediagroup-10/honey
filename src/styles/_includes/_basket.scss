@@ -14,7 +14,14 @@
         &-image {
             width: 175px;
             height: 175px;
+            img {
+                max-height: 165px;
+            }
         }
+    }
+    &-empty-message {
+        font-size: 20px;
+        text-align: center;
     }
     &-thumbnail {
         float: left;

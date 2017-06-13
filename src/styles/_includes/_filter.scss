@@ -27,6 +27,11 @@
         line-height: 55px;
         background: $success-color;
         margin-bottom: 26px;
+        a {
+            float: right;
+            color: #000;
+            cursor: pointer;
+        }
     }
     h5 {
         font-family: $roboto;

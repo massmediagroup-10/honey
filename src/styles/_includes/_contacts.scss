@@ -1,0 +1,29 @@
+.contacts {
+    margin-bottom: rem-calc(67);
+    &-list {
+        padding-top: 20px;
+    }
+    &-item {
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    h2 {
+        margin-bottom: 3rem;
+    }
+    h5 {
+        margin-bottom: 0.9rem;
+    }
+    h6 {
+        font-size: 14px;
+        font-weight: normal;
+    }
+}
+#map {
+    height: 385px;
+    width: 100%;
+    background-color: grey;
+}
